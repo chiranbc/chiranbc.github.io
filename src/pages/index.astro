@@ -1,37 +1,140 @@
 ---
-import Layout from '../layouts/Layout.astro'
+const researchAreas = [
+  {
+    name: "Space Autonomy, Navigation, and Estimation",
+    href: "/research#space-estimation",
+    top: "24%",
+    left: "78%",
+  },
+  {
+    name: "AI/ML for Multidisciplinary Applications",
+    href: "/research#mda-ml",
+    top: "72%",
+    left: "20%",
+  },
+];
 
-import { profile } from '@/settings'
-import { publications } from '@/data/cv'
-import ProfilePictures from '@/assets/profile_pictures.jpg'
-import Hero from '@/components/ui/Hero.astro'
-import Grid from '@/components/ui/Grid.astro'
-import ArticleList from '@/components/ui/ArticleList.astro'
-
-const { fullName, title, institute, research_areas } = profile
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const quickLinks = [
+  { label: "CV", href: "/cv.pdf" },
+  { label: "Resume", href: "/resume.pdf" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/chiran-cherian/" },
+  { label: "Google Scholar", href: "https://scholar.google.com/citations?user=gJAFxi8AAAAJ&hl=en" },
+  { label: "ResearchGate", href: "https://www.researchgate.net/profile/Chiran-Cherian?ev=hdr_xprf" },
+];
 ---
 
-<Layout>
-	<!-- Hero Section -->
-	<section class='flex items-center gap-12 border-b pb-12'>
-		<Hero
-			fullName={fullName}
-			title={title}
-			institute={institute}
-			profilePicture={ProfilePictures}
-		/>
-	</section>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chiran Binnu Cherian | Research Website</title>
+    <meta
+      name="description"
+      content="Personal research website featuring work in space autonomy, navigation, estimation, and AI/ML for engineering materials."
+    />
+  </head>
 
-	<!-- Research Areas -->
-	<section class='py-12 border-b'>
-		<Grid gridTitle='Research Areas' gridItems={research_areas} />
-	</section>
+  <body class="min-h-screen bg-slate-950 text-white overflow-x-hidden">
+    <main class="relative min-h-screen flex items-center justify-center px-6 py-12">
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/5 blur-3xl"></div>
+        <div class="absolute left-[20%] top-[20%] h-48 w-48 rounded-full bg-blue-500/10 blur-3xl"></div>
+        <div class="absolute right-[15%] bottom-[15%] h-56 w-56 rounded-full bg-indigo-500/10 blur-3xl"></div>
+      </div>
 
-	<!-- Recent Publications-->
-	<section class='py-12 border-t'>
-		<ArticleList listTitle='Recent Publications' listItems={publications} />
-	</section>
-</Layout>
+      <section class="relative w-full max-w-6xl">
+        <div class="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
+          <div class="relative z-10">
+            <p class="mb-3 text-sm uppercase tracking-[0.3em] text-cyan-300/80">
+              Personal Research Website
+            </p>
+
+            <h1 class="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+              Chiran Binnu Cherian
+            </h1>
+
+            <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
+              Researcher working at the intersection of space systems, estimation,
+              autonomy, and machine learning, with current interests in space-state
+              estimation and AI/ML for multidisciplinary applications .
+            </p>
+
+            <p class="mt-5 max-w-2xl text-base leading-7 text-slate-400">
+              This site highlights my research, publications, projects,
+              achievements, events, CV, and professional materials.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+              {quickLinks.map((link) => (
+                <a
+                  href={link.href}
+                  target={link.href.startsWith("http") ? "_blank" : "_self"}
+                  rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  class="rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition hover:border-cyan-300/40 hover:bg-cyan-300/10"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+
+            <div class="mt-10 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
+                <p class="text-sm text-slate-400">Research Area 1</p>
+                <p class="mt-1 font-semibold text-white">
+                  Space Autonomy, Navigation, and Estimation
+                </p>
+              </div>
+
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
+                <p class="text-sm text-slate-400">Research Area 2</p>
+                <p class="mt-1 font-semibold text-white">
+                  AI/ML for Engineering Materials
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative mx-auto aspect-square w-full max-w-[560px]">
+            <div class="absolute inset-[8%] rounded-full border border-white/10"></div>
+            <div class="absolute inset-[24%] rounded-full border border-white/10"></div>
+
+            <div class="absolute left-1/2 top-1/2 z-20 w-72 -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-white/15 bg-slate-900/80 p-6 text-center shadow-2xl backdrop-blur">
+              <img
+                src="/profile.jpg"
+                alt="Profile photo"
+                class="mx-auto mb-4 h-24 w-24 rounded-full border border-white/20 object-cover"
+              />
+
+              <h2 class="text-2xl font-bold">Chiran Binnu Cherian</h2>
+              <p class="mt-2 text-sm leading-6 text-slate-300">
+                Space Systems · Estimation · Autonomy · Machine Learning
+              </p>
+
+              <a
+                href="/about"
+                class="mt-5 inline-block rounded-xl bg-cyan-300 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
+              >
+                View Profile
+              </a>
+            </div>
+
+            {researchAreas.map((area) => (
+              <a
+                href={area.href}
+                class="absolute z-10 -translate-x-1/2 -translate-y-1/2 max-w-[220px] rounded-2xl border border-cyan-300/30 bg-cyan-300/10 px-4 py-3 text-center text-sm font-medium leading-5 text-cyan-100 shadow-lg shadow-cyan-500/10 transition hover:scale-105 hover:border-cyan-200/50 hover:bg-cyan-300/20"
+                style={`top:${area.top}; left:${area.left};`}
+              >
+                {area.name}
+              </a>
+            ))}
+
+            <div class="absolute left-[14%] top-[18%] h-1.5 w-1.5 rounded-full bg-white/70"></div>
+            <div class="absolute left-[86%] top-[18%] h-1 w-1 rounded-full bg-white/60"></div>
+            <div class="absolute left-[18%] top-[82%] h-1 w-1 rounded-full bg-white/60"></div>
+            <div class="absolute left-[84%] top-[78%] h-1.5 w-1.5 rounded-full bg-white/70"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
