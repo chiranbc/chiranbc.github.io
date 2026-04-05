@@ -2,13 +2,13 @@
 const researchAreas = [
   {
     name: "Space Autonomy, Navigation, and Estimation",
-    href: "/research#space-estimation",
+    href: "#research",
     top: "24%",
     left: "78%",
   },
   {
-    name: "AI/ML for Multidisciplinary Applications",
-    href: "/research#mda-ml",
+    name: "AI/ML for Engineering Materials",
+    href: "#research",
     top: "72%",
     left: "20%",
   },
@@ -17,9 +17,33 @@ const researchAreas = [
 const quickLinks = [
   { label: "CV", href: "/cv.pdf" },
   { label: "Resume", href: "/resume.pdf" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/chiran-cherian/" },
-  { label: "Google Scholar", href: "https://scholar.google.com/citations?user=gJAFxi8AAAAJ&hl=en" },
-  { label: "ResearchGate", href: "https://www.researchgate.net/profile/Chiran-Cherian?ev=hdr_xprf" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/YOUR-LINKEDIN/" },
+  { label: "Google Scholar", href: "https://scholar.google.com/" },
+  { label: "ResearchGate", href: "https://www.researchgate.net/profile/YOUR-RESEARCHGATE" },
+];
+
+const publications = [
+  {
+    title: "Add your first publication title here",
+    venue: "Journal / Conference, Year",
+    href: "#",
+  },
+  {
+    title: "Add your second publication title here",
+    venue: "Journal / Conference, Year",
+    href: "#",
+  },
+  {
+    title: "Add your third publication title here",
+    venue: "Journal / Conference, Year",
+    href: "#",
+  },
+];
+
+const updates = [
+  "Add a recent update here, such as a presentation, submission, or milestone.",
+  "Add another recent update here.",
+  "Add a third update here.",
 ];
 ---
 
@@ -27,111 +51,267 @@ const quickLinks = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chiran Binnu Cherian | Research Website</title>
+    <title>Your Name | Research Website</title>
     <meta
       name="description"
       content="Personal research website featuring work in space autonomy, navigation, estimation, and AI/ML for engineering materials."
     />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
 
-  <body class="min-h-screen bg-slate-950 text-white overflow-x-hidden">
-    <main class="relative min-h-screen flex items-center justify-center px-6 py-12">
-      <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/5 blur-3xl"></div>
-        <div class="absolute left-[20%] top-[20%] h-48 w-48 rounded-full bg-blue-500/10 blur-3xl"></div>
-        <div class="absolute right-[15%] bottom-[15%] h-56 w-56 rounded-full bg-indigo-500/10 blur-3xl"></div>
-      </div>
+  <body class="bg-slate-950 text-white overflow-x-hidden">
+    <!-- Top navigation -->
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <a href="#" class="text-lg font-semibold tracking-wide text-white">
+          Your Name
+        </a>
 
-      <section class="relative w-full max-w-6xl">
-        <div class="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
-          <div class="relative z-10">
-            <p class="mb-3 text-sm uppercase tracking-[0.3em] text-cyan-300/80">
-              Personal Research Website
-            </p>
+        <div class="hidden gap-6 text-sm text-slate-300 md:flex">
+          <a href="#about" class="transition hover:text-cyan-300">About</a>
+          <a href="#research" class="transition hover:text-cyan-300">Research</a>
+          <a href="#publications" class="transition hover:text-cyan-300">Publications</a>
+          <a href="#updates" class="transition hover:text-cyan-300">Updates</a>
+          <a href="#contact" class="transition hover:text-cyan-300">Contact</a>
+        </div>
+      </nav>
+    </header>
 
-            <h1 class="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-              Chiran Binnu Cherian
-            </h1>
+    <!-- Hero -->
+    <main class="relative">
+      <section class="relative min-h-screen flex items-center justify-center px-6 py-16">
+        <div class="absolute inset-0 pointer-events-none">
+          <div class="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/5 blur-3xl"></div>
+          <div class="absolute left-[20%] top-[20%] h-48 w-48 rounded-full bg-blue-500/10 blur-3xl"></div>
+          <div class="absolute right-[15%] bottom-[15%] h-56 w-56 rounded-full bg-indigo-500/10 blur-3xl"></div>
+        </div>
 
-            <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-              Researcher working at the intersection of space systems, estimation,
-              autonomy, and machine learning, with current interests in space-state
-              estimation and AI/ML for multidisciplinary applications .
-            </p>
-
-            <p class="mt-5 max-w-2xl text-base leading-7 text-slate-400">
-              This site highlights my research, publications, projects,
-              achievements, events, CV, and professional materials.
-            </p>
-
-            <div class="mt-8 flex flex-wrap gap-3">
-              {quickLinks.map((link) => (
-                <a
-                  href={link.href}
-                  target={link.href.startsWith("http") ? "_blank" : "_self"}
-                  rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  class="rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition hover:border-cyan-300/40 hover:bg-cyan-300/10"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-
-            <div class="mt-10 grid gap-4 sm:grid-cols-2">
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-                <p class="text-sm text-slate-400">Research Area 1</p>
-                <p class="mt-1 font-semibold text-white">
-                  Space Autonomy, Navigation, and Estimation
-                </p>
-              </div>
-
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-                <p class="text-sm text-slate-400">Research Area 2</p>
-                <p class="mt-1 font-semibold text-white">
-                  AI/ML for Engineering Materials
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="relative mx-auto aspect-square w-full max-w-[560px]">
-            <div class="absolute inset-[8%] rounded-full border border-white/10"></div>
-            <div class="absolute inset-[24%] rounded-full border border-white/10"></div>
-
-            <div class="absolute left-1/2 top-1/2 z-20 w-72 -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-white/15 bg-slate-900/80 p-6 text-center shadow-2xl backdrop-blur">
-              <img
-                src="/profile.jpg"
-                alt="Profile photo"
-                class="mx-auto mb-4 h-24 w-24 rounded-full border border-white/20 object-cover"
-              />
-
-              <h2 class="text-2xl font-bold">Chiran Binnu Cherian</h2>
-              <p class="mt-2 text-sm leading-6 text-slate-300">
-                Space Systems · Estimation · Autonomy · Machine Learning
+        <div class="relative w-full max-w-6xl">
+          <div class="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
+            <!-- Left hero text -->
+            <div class="relative z-10">
+              <p class="mb-3 text-sm uppercase tracking-[0.3em] text-cyan-300/80">
+                Personal Research Website
               </p>
 
-              <a
-                href="/about"
-                class="mt-5 inline-block rounded-xl bg-cyan-300 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
-              >
-                View Profile
-              </a>
+              <h1 class="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+                Your Name
+              </h1>
+
+              <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
+                Researcher working at the intersection of space systems, estimation,
+                autonomy, and machine learning, with current interests in space-state
+                estimation and AI/ML for engineering materials.
+              </p>
+
+              <p class="mt-5 max-w-2xl text-base leading-7 text-slate-400">
+                This site highlights my research, publications, projects,
+                achievements, events, and professional materials.
+              </p>
+
+              <div class="mt-8 flex flex-wrap gap-3">
+                {quickLinks.map((link) => (
+                  <a
+                    href={link.href}
+                    target={link.href.startsWith("http") ? "_blank" : "_self"}
+                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    class="rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition hover:border-cyan-300/40 hover:bg-cyan-300/10"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+
+              <div class="mt-10 grid gap-4 sm:grid-cols-2">
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
+                  <p class="text-sm text-slate-400">Research Area 1</p>
+                  <p class="mt-1 font-semibold text-white">
+                    Space Autonomy, Navigation, and Estimation
+                  </p>
+                </div>
+
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
+                  <p class="text-sm text-slate-400">Research Area 2</p>
+                  <p class="mt-1 font-semibold text-white">
+                    AI/ML for Engineering Materials
+                  </p>
+                </div>
+              </div>
             </div>
 
-            {researchAreas.map((area) => (
+            <!-- Orbital visual -->
+            <div class="relative mx-auto aspect-square w-full max-w-[560px]">
+              <div class="absolute inset-[8%] rounded-full border border-white/10"></div>
+              <div class="absolute inset-[24%] rounded-full border border-white/10"></div>
+
+              <div class="absolute left-1/2 top-1/2 z-20 w-72 -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-white/15 bg-slate-900/80 p-6 text-center shadow-2xl backdrop-blur">
+                <img
+                  src="/profile.jpg"
+                  alt="Profile photo"
+                  class="mx-auto mb-4 h-24 w-24 rounded-full border border-white/20 object-cover"
+                />
+
+                <h2 class="text-2xl font-bold">Your Name</h2>
+                <p class="mt-2 text-sm leading-6 text-slate-300">
+                  Space Systems · Estimation · Autonomy · Machine Learning
+                </p>
+
+                <a
+                  href="#about"
+                  class="mt-5 inline-block rounded-xl bg-cyan-300 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
+                >
+                  Explore Profile
+                </a>
+              </div>
+
+              {researchAreas.map((area) => (
+                <a
+                  href={area.href}
+                  class="absolute z-10 -translate-x-1/2 -translate-y-1/2 max-w-[220px] rounded-2xl border border-cyan-300/30 bg-cyan-300/10 px-4 py-3 text-center text-sm font-medium leading-5 text-cyan-100 shadow-lg shadow-cyan-500/10 transition hover:scale-105 hover:border-cyan-200/50 hover:bg-cyan-300/20"
+                  style={`top:${area.top}; left:${area.left};`}
+                >
+                  {area.name}
+                </a>
+              ))}
+
+              <div class="absolute left-[14%] top-[18%] h-1.5 w-1.5 rounded-full bg-white/70"></div>
+              <div class="absolute left-[86%] top-[18%] h-1 w-1 rounded-full bg-white/60"></div>
+              <div class="absolute left-[18%] top-[82%] h-1 w-1 rounded-full bg-white/60"></div>
+              <div class="absolute left-[84%] top-[78%] h-1.5 w-1.5 rounded-full bg-white/70"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="border-t border-white/10 bg-slate-900/60 px-6 py-20">
+        <div class="mx-auto max-w-5xl">
+          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">About</p>
+          <h2 class="mt-3 text-3xl font-bold">A concise research profile</h2>
+          <p class="mt-6 max-w-3xl text-base leading-8 text-slate-300">
+            I am a researcher interested in the use of estimation, autonomy, and
+            machine learning for engineering systems. My current work spans two
+            broad themes: space-state estimation for space applications, and
+            AI/ML-based modeling for engineering materials.
+          </p>
+        </div>
+      </section>
+
+      <!-- Research -->
+      <section id="research" class="px-6 py-20">
+        <div class="mx-auto max-w-6xl">
+          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">Research Snapshot</p>
+          <h2 class="mt-3 text-3xl font-bold">Two growing research directions</h2>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-2">
+            <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
+              <p class="text-sm uppercase tracking-wide text-cyan-300/80">
+                Research Area 1
+              </p>
+              <h3 class="mt-3 text-2xl font-semibold">
+                Space Autonomy, Navigation, and Estimation
+              </h3>
+              <p class="mt-4 leading-7 text-slate-300">
+                This area includes work on state estimation, filtering methods,
+                and space-related autonomous systems, including polynomial Kalman
+                filtering and related estimation methods for space applications.
+              </p>
               <a
-                href={area.href}
-                class="absolute z-10 -translate-x-1/2 -translate-y-1/2 max-w-[220px] rounded-2xl border border-cyan-300/30 bg-cyan-300/10 px-4 py-3 text-center text-sm font-medium leading-5 text-cyan-100 shadow-lg shadow-cyan-500/10 transition hover:scale-105 hover:border-cyan-200/50 hover:bg-cyan-300/20"
-                style={`top:${area.top}; left:${area.left};`}
+                href="#"
+                class="mt-6 inline-block rounded-xl border border-cyan-300/30 px-4 py-2 text-sm font-medium text-cyan-200 transition hover:bg-cyan-300/10"
               >
-                {area.name}
+                Learn more
+              </a>
+            </article>
+
+            <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
+              <p class="text-sm uppercase tracking-wide text-cyan-300/80">
+                Research Area 2
+              </p>
+              <h3 class="mt-3 text-2xl font-semibold">
+                AI/ML for Engineering Materials
+              </h3>
+              <p class="mt-4 leading-7 text-slate-300">
+                This area focuses on machine learning approaches for understanding
+                and predicting the mechanical and wear characterization of
+                composites and related engineering material systems.
+              </p>
+              <a
+                href="#"
+                class="mt-6 inline-block rounded-xl border border-cyan-300/30 px-4 py-2 text-sm font-medium text-cyan-200 transition hover:bg-cyan-300/10"
+              >
+                Learn more
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications" class="border-t border-white/10 bg-slate-900/60 px-6 py-20">
+        <div class="mx-auto max-w-5xl">
+          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">Selected Publications</p>
+          <h2 class="mt-3 text-3xl font-bold">Highlighted recent work</h2>
+
+          <div class="mt-10 space-y-5">
+            {publications.map((pub) => (
+              <article class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+                <h3 class="text-lg font-semibold text-white">{pub.title}</h3>
+                <p class="mt-2 text-sm text-slate-400">{pub.venue}</p>
+                <a
+                  href={pub.href}
+                  class="mt-4 inline-block text-sm font-medium text-cyan-300 transition hover:text-cyan-200"
+                >
+                  View publication
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Updates -->
+      <section id="updates" class="px-6 py-20">
+        <div class="mx-auto max-w-5xl">
+          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">Mission Log</p>
+          <h2 class="mt-3 text-3xl font-bold">Recent updates</h2>
+
+          <div class="mt-10 space-y-4">
+            {updates.map((update) => (
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5 text-slate-300 backdrop-blur">
+                {update}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="border-t border-white/10 bg-slate-900/60 px-6 py-20">
+        <div class="mx-auto max-w-5xl text-center">
+          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">Contact</p>
+          <h2 class="mt-3 text-3xl font-bold">Let’s connect</h2>
+          <p class="mx-auto mt-6 max-w-2xl leading-8 text-slate-300">
+            For research collaboration, academic opportunities, and professional
+            inquiries, feel free to connect through LinkedIn, Google Scholar,
+            ResearchGate, or email.
+          </p>
+
+          <div class="mt-8 flex flex-wrap justify-center gap-3">
+            {quickLinks.map((link) => (
+              <a
+                href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : "_self"}
+                rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                class="rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition hover:border-cyan-300/40 hover:bg-cyan-300/10"
+              >
+                {link.label}
               </a>
             ))}
-
-            <div class="absolute left-[14%] top-[18%] h-1.5 w-1.5 rounded-full bg-white/70"></div>
-            <div class="absolute left-[86%] top-[18%] h-1 w-1 rounded-full bg-white/60"></div>
-            <div class="absolute left-[18%] top-[82%] h-1 w-1 rounded-full bg-white/60"></div>
-            <div class="absolute left-[84%] top-[78%] h-1.5 w-1.5 rounded-full bg-white/70"></div>
           </div>
         </div>
       </section>
