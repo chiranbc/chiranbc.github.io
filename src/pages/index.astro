@@ -41,7 +41,7 @@ const publications = [
 ];
 
 const updates = [
-  "Add a recent update here, such as a presentation, submission, or milestone.",
+  "Add a recent update here, such as a presentation, submission, award, or milestone.",
   "Add another recent update here.",
   "Add a third update here.",
 ];
@@ -67,22 +67,22 @@ const updates = [
     <!-- Top navigation -->
     <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
       <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" class="text-lg font-semibold tracking-wide text-white">
+        <a href="/" class="text-lg font-semibold tracking-wide text-white">
           Your Name
         </a>
 
         <div class="hidden gap-6 text-sm text-slate-300 md:flex">
           <a href="#about" class="transition hover:text-cyan-300">About</a>
           <a href="#research" class="transition hover:text-cyan-300">Research</a>
-          <a href="#publications" class="transition hover:text-cyan-300">Publications</a>
+          <a href="/publications" class="transition hover:text-cyan-300">Publications</a>
           <a href="#updates" class="transition hover:text-cyan-300">Updates</a>
           <a href="#contact" class="transition hover:text-cyan-300">Contact</a>
         </div>
       </nav>
     </header>
 
-    <!-- Hero -->
     <main class="relative">
+      <!-- Hero -->
       <section class="relative min-h-screen flex items-center justify-center px-6 py-16">
         <div class="absolute inset-0 pointer-events-none">
           <div class="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/5 blur-3xl"></div>
@@ -264,6 +264,8 @@ const updates = [
                 <p class="mt-2 text-sm text-slate-400">{pub.venue}</p>
                 <a
                   href={pub.href}
+                  target={pub.href.startsWith("http") ? "_blank" : "_self"}
+                  rel={pub.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   class="mt-4 inline-block text-sm font-medium text-cyan-300 transition hover:text-cyan-200"
                 >
                   View publication
@@ -271,6 +273,13 @@ const updates = [
               </article>
             ))}
           </div>
+
+          <a
+            href="/publications"
+            class="mt-8 inline-block rounded-xl border border-cyan-300/30 px-4 py-2 text-sm font-medium text-cyan-200 transition hover:bg-cyan-300/10"
+          >
+            View all publications
+          </a>
         </div>
       </section>
 
