@@ -1,38 +1,138 @@
 ---
 const researchExperience = [
   {
-    title: "Add research role here",
-    organization: "Institution / Lab Name",
-    period: "Year – Present",
-    description:
-      "Add a short description of your research role, the main problems you worked on, and the methods or tools you used.",
+    organization:
+      "Spacecraft Procedures for Autonomous Control and Estimation Laboratory",
+    institution: "Iowa State University",
+    role: "Graduate Researcher",
+    period: "May 2024 – Present",
+    advisor: "Advisor: Dr. Simone Servadio",
+    items: [
+      "Co-developed Quadratic Extended and Unscented Kalman Filters using quadratic approximations of the minimum mean-square-error estimator.",
+      "Extended conventional EKF and UKF measurement updates beyond affine dependence on the measurement.",
+      "Incorporated higher-order central moments, including skewness and kurtosis, for nonlinear estimation under non-Gaussian uncertainty.",
+      "Generalized quadratic measurement updates to arbitrary-order polynomial estimators while retaining a recursive Kalman-filter architecture.",
+      "Integrated Conjugate Unscented Transformation rules for evaluation of higher-order moments.",
+      "Evaluated higher-order filtering methods using Clohessy-Wiltshire and CR3BP dynamics.",
+    ],
   },
+
   {
-    title: "Add previous research role here",
-    organization: "Institution / Group Name",
-    period: "Year – Year",
-    description:
-      "Add a short description of your contributions, research focus, or technical responsibilities.",
+    organization: "Iowa State University",
+    institution: "Ames, Iowa",
+    role: "Researcher — LEQG Covariance Steering",
+    period: "August 2026 – Present",
+    advisor: "Collaborators: Yasemin Isik and Dr. Abhishek Halder",
+    items: [
+      "Formulated and analyzed continuous-time Linear Exponential Quadratic Gaussian covariance steering between prescribed Gaussian endpoint covariances.",
+      "Derived the optimal risk-sensitive linear state-feedback structure.",
+      "Established local existence and uniqueness near the corresponding risk-neutral covariance-steering solution.",
+      "Implemented Newton's method with backtracking line search for the resulting implicit nonlinear matrix equation.",
+      "Demonstrated the numerical method on a noisy double-integrator system.",
+    ],
+  },
+
+  {
+    organization: "Vellore Institute of Technology",
+    institution: "Vellore, India",
+    role: "Researcher — Composite Materials and Machine Learning",
+    period: "May 2023 – May 2025",
+    advisor: "Advisors: Dr. Devasri Fuloria and Dr. Gaurav Gupta",
+    items: [
+      "Investigated sisal-fiber, dolomite-dust, and epoxy hybrid composites.",
+      "Applied Taguchi L16 design of experiments to sliding-wear characterization.",
+      "Evaluated linear regression, decision tree, random forest, support vector regression, and artificial neural network models for material-property prediction.",
+      "Studied the relationship between composite formulation, mechanical behavior, and wear performance.",
+    ],
   },
 ];
 
-const professionalExperience = [
+const technicalProjects = [
   {
-    title: "Add professional role here",
-    organization: "Company / Organization Name",
-    period: "Year – Year",
+    title:
+      "Multi-Revolution Lambert Solver and Interplanetary Trajectory Reconstruction",
+    period: "August 2024 – December 2024",
+    tools: "MATLAB",
     description:
-      "Add a short description of your responsibilities, technical work, and notable outcomes.",
+      "Developed a constrained multiple-revolution Lambert solver and used it to reconstruct interplanetary spacecraft trajectories.",
+    items: [
+      "Implemented short-path and long-path transfer solutions with periapsis and apoapsis restrictions.",
+      "Reconstructed the Cassini-Huygens trajectory.",
+      "Validated generated ephemerides against NASA/JPL Horizons data.",
+      "Extended the framework to Galileo and Voyager trajectory cases.",
+    ],
+  },
+
+  {
+    title: "Titan Parafoil Terminal-Descent Optimization",
+    period: "February 2025 – May 2025",
+    tools: "Nonlinear Optimization",
+    description:
+      "Formulated a nonconvex trajectory-optimization problem for terminal descent and soft landing of a parafoil vehicle on Titan.",
+    items: [
+      "Implemented glide-slope constraints.",
+      "Included pointing-angle and virtual-control constraints.",
+      "Evaluated the terminal-descent formulation across varying initial states.",
+      "Developed the problem around terrain-relative-navigation requirements.",
+    ],
   },
 ];
 
-const leadershipService = [
+const teachingExperience = [
   {
-    title: "Add teaching / mentoring / service role here",
-    organization: "Institution / Organization",
-    period: "Year – Year",
-    description:
-      "Add a short description of your teaching, leadership, mentoring, reviewing, or service activities.",
+    institution: "Iowa State University",
+    role: "Teaching Assistant — Linear Systems",
+    course: "AERE / EE / ME / MATH 5770",
+    period: "August 2025 – December 2025",
+    items: [
+      "Assisted with lectures, course presentations, grading, and student support for a graduate-level linear systems course.",
+      "Conducted office hours.",
+      "Developed a computational example to visualize theoretically intensive linear-systems concepts.",
+    ],
+  },
+];
+
+const industryExperience = [
+  {
+    company: "Dynamatic Technologies Limited — Oldland Aerospace",
+    location: "India",
+    role: "Engineering Intern",
+    period: "August 2023 – October 2023",
+    items: [
+      "Supported SolidWorks-based design and manufacture of aerospace components, including flap-track and helicopter-fuselage components.",
+      "Conducted quality control and non-destructive testing.",
+      "Performed CNC machining, component assembly, and fabrication of metallic and composite test specimens.",
+      "Collaborated with production personnel to identify manufacturing defects and support corrective actions.",
+    ],
+  },
+
+  {
+    company: "APT Global Marine Services L.L.C.",
+    location: "UAE",
+    role: "Engineering Intern",
+    period: "June 2022 – August 2022",
+    items: [
+      "Supported manufacturing and testing of naval components.",
+      "Produced Autodesk Fusion 360 CAD models for product-development activities.",
+      "Performed welding, CNC machining, assembly, and quality inspection.",
+      "Supported shipbuilding and naval-repair activities.",
+    ],
+  },
+];
+
+const leadership = [
+  {
+    organization: "Team Sammard — University Rocket Team",
+    institution: "Vellore Institute of Technology",
+    role: "Senior Team Member · Former Recovery Head",
+    period: "July 2019 – May 2023",
+    items: [
+      "Contributed to the design, fabrication, launch, and recovery of a 10,000-ft sounding rocket developed for the Spaceport America Cup.",
+      "Supported development of a tethered camera payload designed for deployment at approximately 4,000 ft for the CanSat Competition.",
+      "Led recovery-system activities.",
+      "Developed safer and more cost-effective ejection and motor-testing procedures.",
+      "Introduced OpenRocket for project optimization.",
+    ],
   },
 ];
 ---
@@ -40,165 +140,671 @@ const leadershipService = [
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Experience | Your Name</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>Experience | Chiran Binnu Cherian</title>
+
     <meta
       name="description"
-      content="Experience page for Your Name, including research experience, professional experience, and leadership or service activities."
-    />
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
-  </head>
+      content="Research, engineering, teaching, technical project, and leadership experience of Chiran Binnu Cherian."
+            class="transition hover:text-cyan-300"
+          >
+            Publications
+          </a>
 
-  <body class="bg-slate-950 text-white overflow-x-hidden">
-    <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
-      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="/" class="text-lg font-semibold tracking-wide text-white">
-          Your Name
-        </a>
+          <a
+            href="/experience"
+            class="font-medium text-cyan-300"
+                   h-[440px] w-[440px]
+                   -translate-x-1/2 -translate-y-1/2
+                   rounded-full border border-white/5"
+          >
+          </div>
 
-        <div class="hidden gap-6 text-sm text-slate-300 md:flex">
-          <a href="/" class="transition hover:text-cyan-300">Home</a>
-          <a href="/about" class="transition hover:text-cyan-300">About</a>
-          <a href="/research" class="transition hover:text-cyan-300">Research</a>
-          <a href="/publications" class="transition hover:text-cyan-300">Publications</a>
-          <a href="/experience" class="transition hover:text-cyan-300">Experience</a>
-          <a href="/news" class="transition hover:text-cyan-300">News</a>
-          <a href="/#contact" class="transition hover:text-cyan-300">Contact</a>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <!-- Hero -->
-      <section class="relative overflow-hidden px-6 py-24">
-        <div class="absolute inset-0 pointer-events-none">
-          <div class="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/5 blur-3xl"></div>
         </div>
 
         <div class="relative mx-auto max-w-5xl text-center">
-          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">
+
+          <p
+            class="text-sm uppercase tracking-[0.3em]
+                   text-cyan-300/80"
+          >
             Experience
           </p>
-          <h1 class="mt-4 text-4xl font-bold sm:text-5xl">
+
+          <h1
+            class="mt-4 text-4xl font-bold tracking-tight
+                   sm:text-5xl lg:text-6xl"
+          >
             Professional Trajectory
           </h1>
-          <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-            A summary of my research experience, professional work, and academic
-            service across engineering, estimation, and machine learning.
+
+          <p
+            class="mx-auto mt-6 max-w-3xl
+                   text-lg leading-8 text-slate-300"
+          >
+            My experience spans academic research,
+            optimal control and estimation, aerospace
+            and marine engineering, graduate teaching,
+            technical projects, and student rocketry.
           </p>
+
+          <div class="mt-10 flex flex-wrap justify-center gap-3">
+
+            <a
+              href="#research"
+              class="rounded-xl border border-cyan-300/30
+                     bg-cyan-300/5 px-4 py-2.5
+                     text-sm font-medium text-cyan-200
+                     transition hover:bg-cyan-300/10"
+            >
+              Research
+            </a>
+
+            <a
+              href="#projects"
+              class="rounded-xl border border-cyan-300/30
+                     bg-cyan-300/5 px-4 py-2.5
+                     text-sm font-medium text-cyan-200
+                     transition hover:bg-cyan-300/10"
+            >
+              Projects
+            </a>
+
+            <a
+              href="#teaching"
+              class="rounded-xl border border-cyan-300/30
+                     bg-cyan-300/5 px-4 py-2.5
+                     text-sm font-medium text-cyan-200
+                     transition hover:bg-cyan-300/10"
+            >
+              Teaching
+            </a>
+
+            <a
+              href="#industry"
+              class="rounded-xl border border-cyan-300/30
+                     bg-cyan-300/5 px-4 py-2.5
+                     text-sm font-medium text-cyan-200
+                     transition hover:bg-cyan-300/10"
+            >
+              Industry
+            </a>
+
+            <a
+              href="#leadership"
+              class="rounded-xl border border-cyan-300/30
+                     bg-cyan-300/5 px-4 py-2.5
+                     text-sm font-medium text-cyan-200
+                     transition hover:bg-cyan-300/10"
+            >
+              Leadership
+            </a>
+
+          </div>
+
         </div>
       </section>
 
-      <!-- Research Experience -->
-      <section class="border-t border-white/10 bg-slate-900/60 px-6 py-20">
-        <div class="mx-auto max-w-5xl">
-          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">
+
+      <!-- =========================================================
+           RESEARCH EXPERIENCE
+      ========================================================== -->
+      <section
+        id="research"
+        class="scroll-mt-24 border-t border-white/10
+               bg-slate-900/60 px-6 py-20"
+      >
+
+        <div class="mx-auto max-w-6xl">
+
+          <p
+            class="text-sm uppercase tracking-[0.3em]
+                   text-cyan-300/80"
+          >
             Research Experience
           </p>
-          <h2 class="mt-3 text-3xl font-bold">Research roles and projects</h2>
+
+          <h2 class="mt-3 text-3xl font-bold">
+            Research and scholarly work
+          </h2>
+
 
           <div class="mt-10 space-y-6">
-            {researchExperience.map((item) => (
-              <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
-                <div class="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
-                  <div>
-                    <h3 class="text-2xl font-semibold">{item.title}</h3>
-                    <p class="mt-1 text-slate-400">{item.organization}</p>
-                  </div>
-                  <p class="text-sm font-medium text-cyan-300/90">{item.period}</p>
-                </div>
 
-                <p class="mt-5 leading-8 text-slate-300">{item.description}</p>
-              </article>
-            ))}
+            {
+              researchExperience.map((item) => (
+                <article
+                  class="rounded-3xl border border-white/10
+                         bg-white/[0.04] p-7 sm:p-8"
+                >
+
+                  <div
+                    class="flex flex-col gap-4
+                           md:flex-row md:items-start
+                           md:justify-between"
+                  >
+
+                    <div>
+
+                      <p
+                        class="text-sm font-medium
+                               text-cyan-300"
+                      >
+                        {item.period}
+                      </p>
+
+                      <h3
+                        class="mt-3 text-2xl
+                               font-semibold"
+                      >
+                        {item.role}
+                      </h3>
+
+                      <p class="mt-2 text-slate-300">
+                        {item.organization}
+                      </p>
+
+                      <p
+                        class="mt-1 text-sm
+                               text-slate-400"
+                      >
+                        {item.institution}
+                      </p>
+
+                      <p
+                        class="mt-1 text-sm
+                               text-slate-400"
+                      >
+                        {item.advisor}
+                      </p>
+
+                    </div>
+
+                  </div>
+
+
+                  <ul class="mt-7 space-y-3">
+
+                    {
+                      item.items.map((point) => (
+                        <li
+                          class="flex gap-3
+                                 leading-7 text-slate-300"
+                        >
+                          <span
+                            class="mt-[0.65rem]
+                                   h-1.5 w-1.5
+                                   flex-none rounded-full
+                                   bg-cyan-300"
+                          >
+                          </span>
+
+                          <span>{point}</span>
+                        </li>
+                      ))
+                    }
+
+                  </ul>
+
+                </article>
+              ))
+            }
+
           </div>
+
         </div>
       </section>
 
-      <!-- Professional Experience -->
+
+      <!-- =========================================================
+           SELECTED TECHNICAL PROJECTS
+      ========================================================== -->
+      <section
+        id="projects"
+        class="scroll-mt-24 px-6 py-20"
+      >
+
+        <div class="mx-auto max-w-6xl">
+
+          <p
+            class="text-sm uppercase tracking-[0.3em]
+                   text-cyan-300/80"
+          >
+            Selected Technical Projects
+          </p>
+
+          <h2 class="mt-3 text-3xl font-bold">
+            Applied engineering and computation
+          </h2>
+
+
+          <div class="mt-10 grid gap-6 lg:grid-cols-2">
+
+            {
+              technicalProjects.map((project) => (
+                <article
+                  class="rounded-3xl border border-white/10
+                         bg-white/[0.04] p-7"
+                >
+
+                  <p
+                    class="text-sm font-medium
+                           text-cyan-300"
+                  >
+                    {project.period}
+                  </p>
+
+                  <h3
+                    class="mt-3 text-2xl
+                           font-semibold"
+                  >
+                    {project.title}
+                  </h3>
+
+                  <p
+                    class="mt-3 text-sm
+                           text-slate-400"
+                  >
+                    Methods / Tools: {project.tools}
+                  </p>
+
+                  <p
+                    class="mt-5 leading-8
+                           text-slate-300"
+                  >
+                    {project.description}
+                  </p>
+
+                  <ul class="mt-6 space-y-3">
+
+                    {
+                      project.items.map((point) => (
+                        <li
+                          class="flex gap-3
+                                 leading-7
+                                 text-slate-400"
+                        >
+                          <span
+                            class="mt-[0.65rem]
+                                   h-1.5 w-1.5
+                                   flex-none rounded-full
+                                   bg-cyan-300"
+                          >
+                          </span>
+
+                          <span>{point}</span>
+                        </li>
+                      ))
+                    }
+
+                  </ul>
+
+                </article>
+              ))
+            }
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================================================
+           TEACHING EXPERIENCE
+      ========================================================== -->
+      <section
+        id="teaching"
+        class="scroll-mt-24 border-t border-white/10
+               bg-slate-900/60 px-6 py-20"
+      >
+
+        <div class="mx-auto max-w-6xl">
+
+          <p
+            class="text-sm uppercase tracking-[0.3em]
+                   text-cyan-300/80"
+          >
+            Teaching Experience
+          </p>
+
+          <h2 class="mt-3 text-3xl font-bold">
+            Graduate instruction and student support
+          </h2>
+
+
+          <div class="mt-10">
+
+            {
+              teachingExperience.map((item) => (
+                <article
+                  class="rounded-3xl border
+                         border-white/10
+                         bg-white/[0.04] p-7
+                         sm:p-8"
+                >
+
+                  <p
+                    class="text-sm font-medium
+                           text-cyan-300"
+                  >
+                    {item.period}
+                  </p>
+
+                  <h3
+                    class="mt-3 text-2xl
+                           font-semibold"
+                  >
+                    {item.role}
+                  </h3>
+
+                  <p class="mt-2 text-slate-300">
+                    {item.course}
+                  </p>
+
+                  <p
+                    class="mt-1 text-sm
+                           text-slate-400"
+                  >
+                    {item.institution}
+                  </p>
+
+                  <ul class="mt-7 space-y-3">
+
+                    {
+                      item.items.map((point) => (
+                        <li
+                          class="flex gap-3
+                                 leading-7
+                                 text-slate-300"
+                        >
+                          <span
+                            class="mt-[0.65rem]
+                                   h-1.5 w-1.5
+                                   flex-none rounded-full
+                                   bg-cyan-300"
+                          >
+                          </span>
+
+                          <span>{point}</span>
+                        </li>
+                      ))
+                    }
+
+                  </ul>
+
+                </article>
+              ))
+            }
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================================================
+           INDUSTRY EXPERIENCE
+      ========================================================== -->
+      <section
+        id="industry"
+        class="scroll-mt-24 px-6 py-20"
+      >
+
+        <div class="mx-auto max-w-6xl">
+
+          <p
+            class="text-sm uppercase tracking-[0.3em]
+                   text-cyan-300/80"
+          >
+            Industry Experience
+          </p>
+
+          <h2 class="mt-3 text-3xl font-bold">
+            Aerospace and marine engineering
+          </h2>
+
+
+          <div
+            class="mt-10 grid gap-6
+                   lg:grid-cols-2"
+          >
+
+            {
+              industryExperience.map((item) => (
+                <article
+                  class="rounded-3xl border
+                         border-white/10
+                         bg-white/[0.04] p-7"
+                >
+
+                  <p
+                    class="text-sm font-medium
+                           text-cyan-300"
+                  >
+                    {item.period}
+                  </p>
+
+                  <h3
+                    class="mt-3 text-2xl
+                           font-semibold"
+                  >
+                    {item.role}
+                  </h3>
+
+                  <p
+                    class="mt-2 text-slate-300"
+                  >
+                    {item.company}
+                  </p>
+
+                  <p
+                    class="mt-1 text-sm
+                           text-slate-400"
+                  >
+                    {item.location}
+                  </p>
+
+                  <ul class="mt-6 space-y-3">
+
+                    {
+                      item.items.map((point) => (
+                        <li
+                          class="flex gap-3
+                                 leading-7
+                                 text-slate-400"
+                        >
+                          <span
+                            class="mt-[0.65rem]
+                                   h-1.5 w-1.5
+                                   flex-none rounded-full
+                                   bg-cyan-300"
+                          >
+                          </span>
+
+                          <span>{point}</span>
+                        </li>
+                      ))
+                    }
+
+                  </ul>
+
+                </article>
+              ))
+            }
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================================================
+           LEADERSHIP
+      ========================================================== -->
+      <section
+        id="leadership"
+        class="scroll-mt-24 border-t border-white/10
+               bg-slate-900/60 px-6 py-20"
+      >
+
+        <div class="mx-auto max-w-6xl">
+
+          <p
+            class="text-sm uppercase tracking-[0.3em]
+                   text-cyan-300/80"
+          >
+            Leadership & Engineering Activities
+          </p>
+
+          <h2 class="mt-3 text-3xl font-bold">
+            Student rocketry and engineering leadership
+          </h2>
+
+
+          <div class="mt-10">
+
+            {
+              leadership.map((item) => (
+                <article
+                  class="rounded-3xl border
+                         border-white/10
+                         bg-white/[0.04] p-7
+                         sm:p-8"
+                >
+
+                  <p
+                    class="text-sm font-medium
+                           text-cyan-300"
+                  >
+                    {item.period}
+                  </p>
+
+                  <h3
+                    class="mt-3 text-2xl
+                           font-semibold"
+                  >
+                    {item.role}
+                  </h3>
+
+                  <p class="mt-2 text-slate-300">
+                    {item.organization}
+                  </p>
+
+                  <p
+                    class="mt-1 text-sm
+                           text-slate-400"
+                  >
+                    {item.institution}
+                  </p>
+
+                  <ul class="mt-7 space-y-3">
+
+                    {
+                      item.items.map((point) => (
+                        <li
+                          class="flex gap-3
+                                 leading-7
+                                 text-slate-300"
+                        >
+                          <span
+                            class="mt-[0.65rem]
+                                   h-1.5 w-1.5
+                                   flex-none rounded-full
+                                   bg-cyan-300"
+                          >
+                          </span>
+
+                          <span>{point}</span>
+                        </li>
+                      ))
+                    }
+
+                  </ul>
+
+                </article>
+              ))
+            }
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================================================
+           NEXT LINKS
+      ========================================================== -->
       <section class="px-6 py-20">
-        <div class="mx-auto max-w-5xl">
-          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">
-            Professional Experience
-          </p>
-          <h2 class="mt-3 text-3xl font-bold">Industry and applied work</h2>
 
-          <div class="mt-10 space-y-6">
-            {professionalExperience.map((item) => (
-              <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
-                <div class="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
-                  <div>
-                    <h3 class="text-2xl font-semibold">{item.title}</h3>
-                    <p class="mt-1 text-slate-400">{item.organization}</p>
-                  </div>
-                  <p class="text-sm font-medium text-cyan-300/90">{item.period}</p>
-                </div>
+        <div
+          class="mx-auto max-w-5xl
+                 rounded-3xl border
+                 border-cyan-300/20
+                 bg-cyan-300/[0.04]
+                 p-8 text-center sm:p-12"
+        >
 
-                <p class="mt-5 leading-8 text-slate-300">{item.description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <!-- Leadership & Service -->
-      <section class="border-t border-white/10 bg-slate-900/60 px-6 py-20">
-        <div class="mx-auto max-w-5xl">
-          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">
-            Leadership & Service
-          </p>
-          <h2 class="mt-3 text-3xl font-bold">Teaching, mentoring, and service</h2>
-
-          <div class="mt-10 space-y-6">
-            {leadershipService.map((item) => (
-              <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
-                <div class="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
-                  <div>
-                    <h3 class="text-2xl font-semibold">{item.title}</h3>
-                    <p class="mt-1 text-slate-400">{item.organization}</p>
-                  </div>
-                  <p class="text-sm font-medium text-cyan-300/90">{item.period}</p>
-                </div>
-
-                <p class="mt-5 leading-8 text-slate-300">{item.description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <!-- Closing -->
-      <section class="border-t border-white/10 bg-slate-900/60 px-6 py-20">
-        <div class="mx-auto max-w-5xl text-center">
-          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">
-            Summary
-          </p>
-          <h2 class="mt-3 text-3xl font-bold">An evolving professional profile</h2>
-          <p class="mx-auto mt-6 max-w-3xl leading-8 text-slate-300">
-            This page can grow over time as additional research appointments,
-            internships, teaching roles, and service contributions are added.
+          <p
+            class="text-sm uppercase tracking-[0.3em]
+                   text-cyan-300/80"
+          >
+            Explore Further
           </p>
 
-          <div class="mt-8 flex flex-wrap justify-center gap-3">
-            <a
-              href="/about"
-              class="rounded-xl border border-cyan-300/30 px-4 py-2 text-sm font-medium text-cyan-200 transition hover:bg-cyan-300/10"
-            >
-              About me
-            </a>
+          <h2 class="mt-4 text-3xl font-bold">
+            Research behind the experience
+          </h2>
+
+          <p
+            class="mx-auto mt-6 max-w-2xl
+                   leading-8 text-slate-300"
+          >
+            Explore my research areas for additional
+            technical context, or view publications
+            associated with my current scholarly work.
+          </p>
+
+          <div
+            class="mt-8 flex flex-wrap
+                   justify-center gap-3"
+          >
+
             <a
               href="/research"
-              class="rounded-xl border border-cyan-300/30 px-4 py-2 text-sm font-medium text-cyan-200 transition hover:bg-cyan-300/10"
+              class="rounded-xl border
+                     border-cyan-300/30
+                     px-5 py-2.5 text-sm
+                     font-medium text-cyan-200
+                     transition
+                     hover:bg-cyan-300/10"
             >
-              Explore research
+              Research
             </a>
+
+            <a
+              href="/publications"
+              class="rounded-xl border
+                     border-white/15
+                     bg-white/5
+                     px-5 py-2.5 text-sm
+                     font-medium text-white
+                     transition
+                     hover:border-cyan-300/30"
+            >
+              Publications
+            </a>
+
           </div>
+
         </div>
       </section>
+
     </main>
+
   </body>
 </html>

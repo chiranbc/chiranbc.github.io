@@ -3,329 +3,1139 @@ const researchAreas = [
   {
     name: "Space Autonomy, Navigation, and Estimation",
     href: "/research#space-estimation",
-    top: "24%",
-    left: "78%",
+    top: "15%",
+    left: "50%",
+  },
+  {
+    name: "Stochastic Optimal Control",
+    href: "/research#stochastic-optimal-control",
+    top: "72%",
+    left: "20%",
   },
   {
     name: "AI/ML for Engineering Materials",
     href: "/research#materials-ml",
     top: "72%",
-    left: "20%",
+    left: "80%",
   },
 ];
 
 const quickLinks = [
   { label: "CV", href: "/cv.pdf" },
   { label: "Resume", href: "/resume.pdf" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/YOUR-LINKEDIN/" },
-  { label: "Google Scholar", href: "https://scholar.google.com/" },
-  { label: "ResearchGate", href: "https://www.researchgate.net/profile/YOUR-RESEARCHGATE" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/chiran-cherian/" },
+  { label: "Google Scholar", href: "https://scholar.google.com/citations?user=gJAFxi8AAAAJ&hl=en" },
+  { label: "ResearchGate", href: "https://www.researchgate.net/profile/Chiran-Cherian?ev=hdr_xprf" },
+];
+
+const featuredResearch = [
+  {
+    number: "01",
+    title: "Space Autonomy, Navigation, and Estimation",
+    description:
+      "Nonlinear and higher-order state estimation for aerospace systems, including quadratic and polynomial Kalman-filter updates, non-Gaussian uncertainty, sigma-point methods, and spacecraft navigation.",
+    href: "/research#space-estimation",
+  },
+  {
+    number: "02",
+    title: "Optimal Control",
+    description:
+      "Stochastic optimal control, risk-sensitive control, covariance steering, nonlinear optimization, and trajectory optimization for uncertain dynamical systems.",
+    href: "/research#optimal-control",
+  },
+  {
+    number: "03",
+    title: "AI/ML for Engineering Materials",
+    description:
+      "Machine-learning and statistical methods for prediction and characterization of mechanical and wear behavior in composite engineering materials.",
+    href: "/research#materials-ml",
+  },
 ];
 
 const publications = [
   {
-    title: "Add your first publication title here",
-    venue: "Journal / Conference, Year",
-    href: "#",
+    title: "Linear Exponential Quadratic Gaussian Covariance Steering",
+    venue: "Under Review · arXiv · 2026",
+    area: "Optimal Control",
+    href: "https://arxiv.org/abs/2609.12463",
   },
   {
-    title: "Add your second publication title here",
-    venue: "Journal / Conference, Year",
-    href: "#",
+    title: "Polynomial Updates for the Unscented Kalman Filter",
+    venue: "Under Review · arXiv · 2026",
+    area: "Space Navigation & Estimation",
+    href: "https://arxiv.org/abs/2603.20259",
   },
   {
-    title: "Add your third publication title here",
-    venue: "Journal / Conference, Year",
-    href: "#",
+    title:
+      "Machine Learning Based Prediction on Mechanical and Wear Characterization of Sisal Fiber Reinforced Dolomite Dust-Epoxy Hybrid Composites",
+    venue: "Journal of Materials Research and Technology · 2026",
+    area: "AI/ML for Engineering Materials",
+    href: "https://doi.org/10.1016/j.jmrt.2026.01.210",
   },
 ];
 
-const updates = [
-  "Add a recent update here, such as a presentation, submission, award, or milestone.",
-  "Add another recent update here.",
-  "Add a third update here.",
+const missionLog = [
+  {
+    date: "August 2026",
+    title: "Started Research on LEQG Covariance Steering",
+    category: "Research",
+  },
+  {
+    date: "2026",
+    title: "LEQG Covariance Steering Manuscript Under Review",
+    category: "Manuscript",
+  },
+  {
+    date: "2026",
+    title: "Polynomial Kalman Filtering Manuscript Under Review",
+    category: "Manuscript",
+  },
+  {
+    date: "2026",
+    title: "Composite Materials and Machine Learning Paper Published",
+    category: "Publication",
+  },
 ];
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name | Research Website</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>
+      Chiran Binnu Cherian | Aerospace Engineering Researcher
+    </title>
+
     <meta
       name="description"
-      content="Personal research website featuring work in space autonomy, navigation, estimation, and AI/ML for engineering materials."
+      content="Personal research website of Chiran Binnu Cherian, Ph.D. student in Aerospace Engineering at Iowa State University working in spacecraft estimation, optimal control, and machine learning."
     />
+
     <style>
       html {
         scroll-behavior: smooth;
       }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translate(-50%, -50%) translateY(0px);
+        }
+
+        50% {
+          transform: translate(-50%, -50%) translateY(-6px);
+        }
+      }
+
+      .orbit-node {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .orbit-node:nth-child(2) {
+        animation-delay: -2s;
+      }
+
+      .orbit-node:nth-child(3) {
+        animation-delay: -4s;
+      }
     </style>
   </head>
 
-  <body class="bg-slate-950 text-white overflow-x-hidden">
-    <!-- Top navigation -->
-    <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
-      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="/" class="text-lg font-semibold tracking-wide text-white">
-          Your Name
+  <body class="overflow-x-hidden bg-slate-950 text-white">
+
+    <!-- =========================================================
+         NAVIGATION
+    ========================================================== -->
+    <header
+      class="sticky top-0 z-50 border-b border-white/10
+             bg-slate-950/85 backdrop-blur"
+    >
+      <nav
+        class="mx-auto flex max-w-6xl items-center
+               justify-between px-6 py-4"
+      >
+        <a
+          href="/"
+          class="text-lg font-semibold tracking-wide text-white"
+        >
+          Chiran Binnu Cherian
         </a>
 
         <div class="hidden gap-6 text-sm text-slate-300 md:flex">
-          <a href="/" class="transition hover:text-cyan-300">Home</a>
-          <a href="/about" class="transition hover:text-cyan-300">About</a>
-          <a href="/research" class="transition hover:text-cyan-300">Research</a>
-          <a href="/publications" class="transition hover:text-cyan-300">Publications</a>
-          <a href="/experience" class="transition hover:text-cyan-300">Experience</a>
-          <a href="/news" class="transition hover:text-cyan-300">News</a>
-          <a href="/#contact" class="transition hover:text-cyan-300">Contact</a>
+
+          <a
+            href="/"
+            class="font-medium text-cyan-300"
+          >
+            Home
+          </a>
+
+          <a
+            href="/about"
+            class="transition hover:text-cyan-300"
+          >
+            About
+          </a>
+
+          <a
+            href="/research"
+            class="transition hover:text-cyan-300"
+          >
+            Research
+          </a>
+
+          <a
+            href="/publications"
+            class="transition hover:text-cyan-300"
+          >
+            Publications
+          </a>
+
+          <a
+            href="/experience"
+            class="transition hover:text-cyan-300"
+          >
+            Experience
+          </a>
+
+          <a
+            href="/news"
+            class="transition hover:text-cyan-300"
+          >
+            News
+          </a>
+
+          <a
+            href="#contact"
+            class="transition hover:text-cyan-300"
+          >
+            Contact
+          </a>
+
         </div>
       </nav>
     </header>
 
-    <main class="relative">
-      <!-- Hero -->
-      <section class="relative min-h-screen flex items-center justify-center px-6 py-16">
-        <div class="absolute inset-0 pointer-events-none">
-          <div class="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/5 blur-3xl"></div>
-          <div class="absolute left-[20%] top-[20%] h-48 w-48 rounded-full bg-blue-500/10 blur-3xl"></div>
-          <div class="absolute right-[15%] bottom-[15%] h-56 w-56 rounded-full bg-indigo-500/10 blur-3xl"></div>
+
+    <main>
+
+      <!-- =========================================================
+           HERO
+      ========================================================== -->
+      <section
+        class="relative min-h-[860px] overflow-hidden px-6 py-20"
+      >
+
+        <!-- Background glows -->
+        <div class="pointer-events-none absolute inset-0">
+
+          <div
+            class="absolute left-1/2 top-[42%]
+                   h-[650px] w-[650px]
+                   -translate-x-1/2 -translate-y-1/2
+                   rounded-full bg-cyan-400/[0.06]
+                   blur-3xl"
+          >
+          </div>
+
+          <div
+            class="absolute left-[18%] top-[25%]
+                   h-[300px] w-[300px]
+                   rounded-full bg-violet-400/[0.04]
+                   blur-3xl"
+          >
+          </div>
+
         </div>
 
-        <div class="relative w-full max-w-6xl">
-          <div class="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
-            <!-- Left hero text -->
-            <div class="relative z-10">
-              <p class="mb-3 text-sm uppercase tracking-[0.3em] text-cyan-300/80">
-                Personal Research Website
-              </p>
 
-              <h1 class="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-                Your Name
-              </h1>
+        <div class="relative mx-auto max-w-6xl">
 
-              <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-                Researcher working at the intersection of space systems, estimation,
-                autonomy, and machine learning, with current interests in space-state
-                estimation and AI/ML for engineering materials.
-              </p>
+          <!-- Top Intro -->
+          <div class="mx-auto max-w-4xl text-center">
 
-              <p class="mt-5 max-w-2xl text-base leading-7 text-slate-400">
-                This site highlights my research, publications, projects,
-                achievements, events, and professional materials.
-              </p>
+            <p
+              class="text-sm uppercase tracking-[0.32em]
+                     text-cyan-300/80"
+            >
+              Aerospace Engineering · Estimation · Control
+            </p>
 
-              <div class="mt-8 flex flex-wrap gap-3">
-                {quickLinks.map((link) => (
-                  <a
-                    href={link.href}
-                    target={link.href.startsWith("http") ? "_blank" : "_self"}
-                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    class="rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition hover:border-cyan-300/40 hover:bg-cyan-300/10"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
+            <h1
+              class="mt-5 text-4xl font-bold tracking-tight
+                     sm:text-5xl lg:text-6xl"
+            >
+              Chiran Binnu Cherian
+            </h1>
 
-              <div class="mt-10 grid gap-4 sm:grid-cols-2">
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-                  <p class="text-sm text-slate-400">Research Area 1</p>
-                  <p class="mt-1 font-semibold text-white">
-                    Space Autonomy, Navigation, and Estimation
-                  </p>
-                </div>
+            <p
+              class="mt-4 text-lg font-medium
+                     text-cyan-300"
+            >
+              Ph.D. Student in Aerospace Engineering
+            </p>
 
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-                  <p class="text-sm text-slate-400">Research Area 2</p>
-                  <p class="mt-1 font-semibold text-white">
-                    AI/ML for Engineering Materials
-                  </p>
-                </div>
-              </div>
+            <p
+              class="mt-1 text-slate-400"
+            >
+              Iowa State University · Ames, Iowa
+            </p>
+
+            <p
+              class="mx-auto mt-7 max-w-3xl
+                     text-lg leading-8 text-slate-300"
+            >
+              Researcher working at the intersection of
+              spacecraft navigation and estimation, optimal
+              control, and machine learning for engineering
+              systems. My work spans nonlinear and higher-order
+              filtering for space applications, stochastic
+              optimal control and covariance steering, and
+              data-driven characterization of advanced materials.
+            </p>
+
+          </div>
+
+
+          <!-- =====================================================
+               ORBITAL RESEARCH MAP
+          ====================================================== -->
+          <div
+            class="relative mx-auto mt-14
+                   h-[470px] max-w-[760px]"
+          >
+
+            <!-- Orbit Rings -->
+            <div
+              class="absolute left-1/2 top-1/2
+                     h-[240px] w-[240px]
+                     -translate-x-1/2 -translate-y-1/2
+                     rounded-full border border-white/10"
+            >
             </div>
 
-            <!-- Orbital visual -->
-            <div class="relative mx-auto aspect-square w-full max-w-[560px]">
-              <div class="absolute inset-[8%] rounded-full border border-white/10"></div>
-              <div class="absolute inset-[24%] rounded-full border border-white/10"></div>
+            <div
+              class="absolute left-1/2 top-1/2
+                     h-[360px] w-[540px]
+                     -translate-x-1/2 -translate-y-1/2
+                     rounded-[50%]
+                     border border-white/10"
+            >
+            </div>
 
-              <div class="absolute left-1/2 top-1/2 z-20 w-72 -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-white/15 bg-slate-900/80 p-6 text-center shadow-2xl backdrop-blur">
+            <div
+              class="absolute left-1/2 top-1/2
+                     h-[430px] w-[700px]
+                     -translate-x-1/2 -translate-y-1/2
+                     rounded-[50%]
+                     border border-white/5"
+            >
+            </div>
+
+
+            <!-- Center profile -->
+            <div
+              class="absolute left-1/2 top-1/2 z-20
+                     w-[190px]
+                     -translate-x-1/2 -translate-y-1/2
+                     rounded-3xl border border-cyan-300/20
+                     bg-slate-900/95 p-5 text-center
+                     shadow-2xl backdrop-blur"
+            >
+
+              <div
+                class="mx-auto h-28 w-28
+                       overflow-hidden rounded-full
+                       border-2 border-cyan-300/30"
+              >
                 <img
                   src="/profile.jpg"
-                  alt="Profile photo"
-                  class="mx-auto mb-4 h-24 w-24 rounded-full border border-white/20 object-cover"
+                  alt="Chiran Binnu Cherian"
+                  class="h-full w-full object-cover"
                 />
-
-                <h2 class="text-2xl font-bold">Your Name</h2>
-                <p class="mt-2 text-sm leading-6 text-slate-300">
-                  Space Systems · Estimation · Autonomy · Machine Learning
-                </p>
-
-                <a
-                  href="/about"
-                  class="mt-5 inline-block rounded-xl bg-cyan-300 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
-                >
-                  Explore Profile
-                </a>
               </div>
 
-              {researchAreas.map((area) => (
+              <p
+                class="mt-4 text-sm font-semibold
+                       text-white"
+              >
+                Chiran Binnu Cherian
+              </p>
+
+              <p
+                class="mt-1 text-xs leading-5
+                       text-slate-400"
+              >
+                Estimation · Control · Autonomy · ML
+              </p>
+
+            </div>
+
+
+            <!-- Research Nodes -->
+            {
+              researchAreas.map((area) => (
                 <a
                   href={area.href}
-                  class="absolute z-10 -translate-x-1/2 -translate-y-1/2 max-w-[220px] rounded-2xl border border-cyan-300/30 bg-cyan-300/10 px-4 py-3 text-center text-sm font-medium leading-5 text-cyan-100 shadow-lg shadow-cyan-500/10 transition hover:scale-105 hover:border-cyan-200/50 hover:bg-cyan-300/20"
-                  style={`top:${area.top}; left:${area.left};`}
+                  class="orbit-node absolute z-30
+                         w-[190px] rounded-2xl
+                         border border-cyan-300/25
+                         bg-slate-900/95 p-4
+                         text-center shadow-xl
+                         backdrop-blur transition
+                         hover:border-cyan-300/60
+                         hover:bg-cyan-300/10"
+                  style={`top: ${area.top}; left: ${area.left};`}
                 >
-                  {area.name}
+                  <span
+                    class="text-sm font-medium
+                           leading-5 text-cyan-200"
+                  >
+                    {area.name}
+                  </span>
                 </a>
-              ))}
+              ))
+            }
 
-              <div class="absolute left-[14%] top-[18%] h-1.5 w-1.5 rounded-full bg-white/70"></div>
-              <div class="absolute left-[86%] top-[18%] h-1 w-1 rounded-full bg-white/60"></div>
-              <div class="absolute left-[18%] top-[82%] h-1 w-1 rounded-full bg-white/60"></div>
-              <div class="absolute left-[84%] top-[78%] h-1.5 w-1.5 rounded-full bg-white/70"></div>
+          </div>
+
+
+          <!-- Quick Links -->
+          <div
+            class="mt-2 flex flex-wrap
+                   justify-center gap-3"
+          >
+            {
+              quickLinks.map((link) => (
+                <a
+                  href={link.href}
+                  target={
+                    link.href.startsWith("http")
+                      ? "_blank"
+                      : undefined
+                  }
+                  rel={
+                    link.href.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
+                  class="rounded-xl border
+                         border-white/10 bg-white/5
+                         px-4 py-2.5 text-sm
+                         font-medium text-slate-200
+                         transition
+                         hover:border-cyan-300/30
+                         hover:text-cyan-300"
+                >
+                  {link.label}
+                </a>
+              ))
+            }
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================================================
+           ABOUT SNAPSHOT
+      ========================================================== -->
+      <section
+        class="border-t border-white/10
+               bg-slate-900/60 px-6 py-20"
+      >
+
+        <div
+          class="mx-auto grid max-w-6xl gap-10
+                 lg:grid-cols-[1fr_0.75fr]
+                 lg:items-center"
+        >
+
+          <div>
+
+            <p
+              class="text-sm uppercase tracking-[0.3em]
+                     text-cyan-300/80"
+            >
+              About
+            </p>
+
+            <h2
+              class="mt-3 text-3xl font-bold
+                     tracking-tight sm:text-4xl"
+            >
+              Research across estimation,
+              control, and intelligent systems
+            </h2>
+
+            <p
+              class="mt-6 max-w-3xl
+                     leading-8 text-slate-300"
+            >
+              I am pursuing a Ph.D. in Aerospace Engineering
+              at Iowa State University after completing my M.S.
+              in Aerospace Engineering at Iowa State and my
+              B.Tech. in Mechanical Engineering at Vellore
+              Institute of Technology.
+            </p>
+
+            <p
+              class="mt-4 max-w-3xl
+                     leading-8 text-slate-400"
+            >
+              My work combines mathematical estimation and
+              control theory with computational methods,
+              aerospace applications, and data-driven
+              engineering.
+            </p>
+
+            <a
+              href="/about"
+              class="mt-7 inline-block text-sm
+                     font-medium text-cyan-300
+                     transition hover:text-cyan-200"
+            >
+              More about me →
+            </a>
+
+          </div>
+
+
+          <div
+            class="rounded-3xl border
+                   border-white/10 bg-white/[0.04]
+                   p-7"
+          >
+
+            <p
+              class="text-sm uppercase tracking-[0.2em]
+                     text-slate-400"
+            >
+              Current Focus
+            </p>
+
+            <div class="mt-6 space-y-5">
+
+              <div>
+                <p class="font-medium text-white">
+                  Nonlinear Estimation
+                </p>
+                <p
+                  class="mt-1 text-sm
+                         leading-6 text-slate-400"
+                >
+                  Higher-order and polynomial Kalman-filter
+                  updates under nonlinear and non-Gaussian
+                  uncertainty.
+                </p>
+              </div>
+
+              <div class="border-t border-white/10 pt-5">
+                <p class="font-medium text-white">
+                  Covariance Steering
+                </p>
+                <p
+                  class="mt-1 text-sm
+                         leading-6 text-slate-400"
+                >
+                  Risk-sensitive optimal control and
+                  continuous-time LEQG covariance steering.
+                </p>
+              </div>
+
+              <div class="border-t border-white/10 pt-5">
+                <p class="font-medium text-white">
+                  Engineering Machine Learning
+                </p>
+                <p
+                  class="mt-1 text-sm
+                         leading-6 text-slate-400"
+                >
+                  Data-driven prediction and characterization
+                  of material behavior.
+                </p>
+              </div>
+
             </div>
+
           </div>
+
         </div>
       </section>
 
-      <!-- About -->
-      <section id="about" class="border-t border-white/10 bg-slate-900/60 px-6 py-20">
-        <div class="mx-auto max-w-5xl">
-          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">About</p>
-          <h2 class="mt-3 text-3xl font-bold">A concise research profile</h2>
-          <p class="mt-6 max-w-3xl text-base leading-8 text-slate-300">
-            I am a researcher interested in the use of estimation, autonomy, and
-            machine learning for engineering systems. My current work spans two
-            broad themes: space-state estimation for space applications, and
-            AI/ML-based modeling for engineering materials.
-          </p>
-        </div>
-      </section>
 
-      <!-- Research -->
-      <section id="research" class="px-6 py-20">
+      <!-- =========================================================
+           RESEARCH SNAPSHOT
+      ========================================================== -->
+      <section class="px-6 py-20">
+
         <div class="mx-auto max-w-6xl">
-          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">Research Snapshot</p>
-          <h2 class="mt-3 text-3xl font-bold">Two growing research directions</h2>
 
-          <div class="mt-10 grid gap-6 md:grid-cols-2">
-            <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
-              <p class="text-sm uppercase tracking-wide text-cyan-300/80">
-                Research Area 1
-              </p>
-              <h3 class="mt-3 text-2xl font-semibold">
-                Space Autonomy, Navigation, and Estimation
-              </h3>
-              <p class="mt-4 leading-7 text-slate-300">
-                This area includes work on state estimation, filtering methods,
-                and space-related autonomous systems, including polynomial Kalman
-                filtering and related estimation methods for space applications.
-              </p>
-              <a
-                href="/research#space-estimation"
-                class="mt-6 inline-block rounded-xl border border-cyan-300/30 px-4 py-2 text-sm font-medium text-cyan-200 transition hover:bg-cyan-300/10"
-              >
-                Learn more
-              </a>
-            </article>
+          <p
+            class="text-sm uppercase tracking-[0.3em]
+                   text-cyan-300/80"
+          >
+            Research
+          </p>
 
-            <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
-              <p class="text-sm uppercase tracking-wide text-cyan-300/80">
-                Research Area 2
-              </p>
-              <h3 class="mt-3 text-2xl font-semibold">
-                AI/ML for Engineering Materials
-              </h3>
-              <p class="mt-4 leading-7 text-slate-300">
-                This area focuses on machine learning approaches for understanding
-                and predicting the mechanical and wear characterization of
-                composites and related engineering material systems.
-              </p>
-              <a
-                href="/research#materials-ml"
-                class="mt-6 inline-block rounded-xl border border-cyan-300/30 px-4 py-2 text-sm font-medium text-cyan-200 transition hover:bg-cyan-300/10"
-              >
-                Learn more
-              </a>
-            </article>
+          <h2 class="mt-3 text-3xl font-bold">
+            Research constellations
+          </h2>
+
+          <p
+            class="mt-5 max-w-3xl
+                   leading-8 text-slate-400"
+          >
+            Three connected research directions define my
+            current work.
+          </p>
+
+
+          <div
+            class="mt-10 grid gap-5 lg:grid-cols-3"
+          >
+
+            {
+              featuredResearch.map((area) => (
+                <a
+                  href={area.href}
+                  class="group rounded-3xl
+                         border border-white/10
+                         bg-white/[0.04] p-7
+                         transition
+                         hover:border-cyan-300/30
+                         hover:bg-cyan-300/5"
+                >
+
+                  <p
+                    class="text-sm font-semibold
+                           text-cyan-300"
+                  >
+                    {area.number}
+                  </p>
+
+                  <h3
+                    class="mt-4 text-xl
+                           font-semibold"
+                  >
+                    {area.title}
+                  </h3>
+
+                  <p
+                    class="mt-4 leading-7
+                           text-slate-400"
+                  >
+                    {area.description}
+                  </p>
+
+                  <p
+                    class="mt-6 text-sm
+                           font-medium text-cyan-300"
+                  >
+                    Learn more →
+                  </p>
+
+                </a>
+              ))
+            }
+
           </div>
+
         </div>
       </section>
 
-      <!-- Publications -->
-      <section id="publications" class="border-t border-white/10 bg-slate-900/60 px-6 py-20">
-        <div class="mx-auto max-w-5xl">
-          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">Selected Publications</p>
-          <h2 class="mt-3 text-3xl font-bold">Highlighted recent work</h2>
+
+      <!-- =========================================================
+           FEATURED PUBLICATIONS
+      ========================================================== -->
+      <section
+        class="border-t border-white/10
+               bg-slate-900/60 px-6 py-20"
+      >
+
+        <div class="mx-auto max-w-6xl">
+
+          <div
+            class="flex flex-col gap-5
+                   md:flex-row md:items-end
+                   md:justify-between"
+          >
+
+            <div>
+
+              <p
+                class="text-sm uppercase
+                       tracking-[0.3em]
+                       text-cyan-300/80"
+              >
+                Publications
+              </p>
+
+              <h2
+                class="mt-3 text-3xl font-bold"
+              >
+                Selected scholarly work
+              </h2>
+
+            </div>
+
+
+            <a
+              href="/publications"
+              class="text-sm font-medium
+                     text-cyan-300 transition
+                     hover:text-cyan-200"
+            >
+              View all publications →
+            </a>
+
+          </div>
+
 
           <div class="mt-10 space-y-5">
-            {publications.map((pub) => (
-              <article class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-                <h3 class="text-lg font-semibold text-white">{pub.title}</h3>
-                <p class="mt-2 text-sm text-slate-400">{pub.venue}</p>
+
+            {
+              publications.map((paper, index) => (
                 <a
-                  href={pub.href}
-                  target={pub.href.startsWith("http") ? "_blank" : "_self"}
-                  rel={pub.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  class="mt-4 inline-block text-sm font-medium text-cyan-300 transition hover:text-cyan-200"
+                  href={paper.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group grid gap-5
+                         rounded-3xl border
+                         border-white/10
+                         bg-white/[0.04] p-7
+                         transition
+                         hover:border-cyan-300/30
+                         md:grid-cols-[60px_1fr_auto]
+                         md:items-center"
                 >
-                  View publication
+
+                  <div
+                    class="flex h-11 w-11
+                           items-center justify-center
+                           rounded-full
+                           border border-cyan-300/30
+                           bg-cyan-300/5
+                           text-sm font-semibold
+                           text-cyan-300"
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+
+
+                  <div>
+
+                    <h3
+                      class="text-lg font-semibold
+                             leading-7 text-white"
+                    >
+                      {paper.title}
+                    </h3>
+
+                    <p
+                      class="mt-2 text-sm
+                             text-slate-400"
+                    >
+                      {paper.venue}
+                    </p>
+
+                    <p
+                      class="mt-2 text-xs
+                             text-cyan-300/80"
+                    >
+                      {paper.area}
+                    </p>
+
+                  </div>
+
+
+                  <span
+                    class="text-sm text-cyan-300"
+                  >
+                    Open ↗
+                  </span>
+
                 </a>
-              </article>
-            ))}
+              ))
+            }
+
           </div>
 
-          <a
-            href="/publications"
-            class="mt-8 inline-block rounded-xl border border-cyan-300/30 px-4 py-2 text-sm font-medium text-cyan-200 transition hover:bg-cyan-300/10"
+        </div>
+      </section>
+
+
+      <!-- =========================================================
+           EXPERIENCE SNAPSHOT
+      ========================================================== -->
+      <section class="px-6 py-20">
+
+        <div
+          class="mx-auto grid max-w-6xl
+                 gap-8 lg:grid-cols-2"
+        >
+
+          <div>
+
+            <p
+              class="text-sm uppercase tracking-[0.3em]
+                     text-cyan-300/80"
+            >
+              Experience
+            </p>
+
+            <h2 class="mt-3 text-3xl font-bold">
+              From theory to engineering practice
+            </h2>
+
+            <p
+              class="mt-6 max-w-xl
+                     leading-8 text-slate-300"
+            >
+              My background spans graduate research,
+              aerospace and marine engineering internships,
+              graduate teaching, trajectory optimization,
+              astrodynamics, and student rocketry.
+            </p>
+
+            <a
+              href="/experience"
+              class="mt-7 inline-block
+                     text-sm font-medium
+                     text-cyan-300 transition
+                     hover:text-cyan-200"
+            >
+              View full experience →
+            </a>
+
+          </div>
+
+
+          <div
+            class="grid gap-4 sm:grid-cols-2"
           >
-            View all publications
-          </a>
-        </div>
-      </section>
 
-      <!-- Updates -->
-      <section id="updates" class="px-6 py-20">
-        <div class="mx-auto max-w-5xl">
-          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">Mission Log</p>
-          <h2 class="mt-3 text-3xl font-bold">Recent updates</h2>
+            <div
+              class="rounded-3xl border
+                     border-white/10
+                     bg-white/[0.04] p-6"
+            >
+              <p
+                class="text-2xl font-bold
+                       text-cyan-300"
+              >
+                Research
+              </p>
 
-          <div class="mt-10 space-y-4">
-            {updates.map((update) => (
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-5 text-slate-300 backdrop-blur">
-                {update}
-              </div>
-            ))}
+              <p
+                class="mt-3 leading-7
+                       text-slate-400"
+              >
+                Spacecraft estimation, covariance steering,
+                and engineering materials.
+              </p>
+            </div>
+
+
+            <div
+              class="rounded-3xl border
+                     border-white/10
+                     bg-white/[0.04] p-6"
+            >
+              <p
+                class="text-2xl font-bold
+                       text-cyan-300"
+              >
+                Industry
+              </p>
+
+              <p
+                class="mt-3 leading-7
+                       text-slate-400"
+              >
+                Aerospace manufacturing, marine engineering,
+                quality control, CAD, and fabrication.
+              </p>
+            </div>
+
+
+            <div
+              class="rounded-3xl border
+                     border-white/10
+                     bg-white/[0.04] p-6"
+            >
+              <p
+                class="text-2xl font-bold
+                       text-cyan-300"
+              >
+                Teaching
+              </p>
+
+              <p
+                class="mt-3 leading-7
+                       text-slate-400"
+              >
+                Graduate Linear Systems instruction,
+                computational examples, and student support.
+              </p>
+            </div>
+
+
+            <div
+              class="rounded-3xl border
+                     border-white/10
+                     bg-white/[0.04] p-6"
+            >
+              <p
+                class="text-2xl font-bold
+                       text-cyan-300"
+              >
+                Leadership
+              </p>
+
+              <p
+                class="mt-3 leading-7
+                       text-slate-400"
+              >
+                University rocketry, recovery systems,
+                testing, and engineering leadership.
+              </p>
+            </div>
+
           </div>
+
         </div>
       </section>
 
-      <!-- Contact -->
-      <section id="contact" class="border-t border-white/10 bg-slate-900/60 px-6 py-20">
-        <div class="mx-auto max-w-5xl text-center">
-          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">Contact</p>
-          <h2 class="mt-3 text-3xl font-bold">Let’s connect</h2>
-          <p class="mx-auto mt-6 max-w-2xl leading-8 text-slate-300">
-            For research collaboration, academic opportunities, and professional
-            inquiries, feel free to connect through LinkedIn, Google Scholar,
-            ResearchGate, or email.
+
+      <!-- =========================================================
+           MISSION LOG
+      ========================================================== -->
+      <section
+        class="border-t border-white/10
+               bg-slate-900/60 px-6 py-20"
+      >
+
+        <div class="mx-auto max-w-6xl">
+
+          <div
+            class="flex flex-col gap-5
+                   md:flex-row md:items-end
+                   md:justify-between"
+          >
+
+            <div>
+
+              <p
+                class="text-sm uppercase
+                       tracking-[0.3em]
+                       text-cyan-300/80"
+              >
+                Mission Log
+              </p>
+
+              <h2 class="mt-3 text-3xl font-bold">
+                Recent updates
+              </h2>
+
+            </div>
+
+
+            <a
+              href="/news"
+              class="text-sm font-medium
+                     text-cyan-300 transition
+                     hover:text-cyan-200"
+            >
+              View all news →
+            </a>
+
+          </div>
+
+
+          <div
+            class="mt-10 grid gap-5
+                   md:grid-cols-2"
+          >
+
+            {
+              missionLog.map((item) => (
+                <article
+                  class="rounded-3xl
+                         border border-white/10
+                         bg-white/[0.04] p-6"
+                >
+
+                  <div
+                    class="flex flex-wrap
+                           items-center gap-3"
+                  >
+
+                    <p
+                      class="text-sm font-medium
+                             text-cyan-300"
+                    >
+                      {item.date}
+                    </p>
+
+                    <span
+                      class="rounded-full
+                             border border-white/10
+                             bg-white/5 px-3 py-1
+                             text-xs text-slate-300"
+                    >
+                      {item.category}
+                    </span>
+
+                  </div>
+
+
+                  <h3
+                    class="mt-4 text-lg
+                           font-semibold leading-7"
+                  >
+                    {item.title}
+                  </h3>
+
+                </article>
+              ))
+            }
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================================================
+           CONTACT
+      ========================================================== -->
+      <section
+        id="contact"
+        class="scroll-mt-24 px-6 py-24"
+      >
+
+        <div
+          class="mx-auto max-w-5xl
+                 rounded-3xl border
+                 border-cyan-300/20
+                 bg-cyan-300/[0.04]
+                 p-8 text-center sm:p-12"
+        >
+
+          <p
+            class="text-sm uppercase tracking-[0.3em]
+                   text-cyan-300/80"
+          >
+            Contact
           </p>
 
-          <div class="mt-8 flex flex-wrap justify-center gap-3">
-            {quickLinks.map((link) => (
-              <a
-                href={link.href}
-                target={link.href.startsWith("http") ? "_blank" : "_self"}
-                rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                class="rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition hover:border-cyan-300/40 hover:bg-cyan-300/10"
-              >
-                {link.label}
-              </a>
-            ))}
+          <h2
+            class="mt-4 text-3xl font-bold
+                   sm:text-4xl"
+          >
+            Research, collaboration,
+            and professional opportunities
+          </h2>
+
+          <p
+            class="mx-auto mt-6 max-w-2xl
+                   leading-8 text-slate-300"
+          >
+            I am interested in conversations around
+            spacecraft estimation, optimal control,
+            autonomy, machine learning, and related
+            aerospace research and engineering problems.
+          </p>
+
+
+          <div
+            class="mt-8 flex flex-wrap
+                   justify-center gap-3"
+          >
+
+            <a
+              href="mailto:cbckbc@iastate.edu"
+              class="rounded-xl
+                     border border-cyan-300/30
+                     bg-cyan-300/5
+                     px-5 py-2.5 text-sm
+                     font-medium text-cyan-200
+                     transition
+                     hover:bg-cyan-300/10"
+            >
+              Email Me
+            </a>
+
+            <a
+              href="https://linkedin.com/in/chiran-cherian"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-xl
+                     border border-white/15
+                     bg-white/5
+                     px-5 py-2.5 text-sm
+                     font-medium text-white
+                     transition
+                     hover:border-cyan-300/30"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href="/cv.pdf"
+              class="rounded-xl
+                     border border-white/15
+                     bg-white/5
+                     px-5 py-2.5 text-sm
+                     font-medium text-white
+                     transition
+                     hover:border-cyan-300/30"
+            >
+              View CV
+            </a>
+
           </div>
+
         </div>
       </section>
+
     </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+    <footer
+      class="border-t border-white/10
+             px-6 py-8"
+    >
+
+      <div
+        class="mx-auto flex max-w-6xl
+               flex-col gap-3 text-center
+               text-sm text-slate-500
+               sm:flex-row sm:items-center
+               sm:justify-between
+               sm:text-left"
+      >
+
+        <p>
+          © 2026 Chiran Binnu Cherian
+        </p>
+
+        <p>
+          Aerospace Engineering · Estimation · Control · Autonomy
+        </p>
+
+      </div>
+
+    </footer>
+
   </body>
 </html>

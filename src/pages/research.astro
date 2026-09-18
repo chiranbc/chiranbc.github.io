@@ -1,31 +1,123 @@
 ---
-const spaceProjects = [
+const researchAreas = [
   {
-    title: "Polynomial Kalman Filtering for Space Applications",
-    description:
-      "Research focused on advanced state-estimation and filtering methods for space-related applications, with emphasis on polynomial Kalman filtering and related estimation frameworks.",
-    status: "Current Research",
+    id: "space-estimation",
+    number: "01",
+    title: "Space Autonomy, Navigation, and Estimation",
+    summary:
+      "My work in this area focuses on nonlinear state estimation and higher-order Kalman-filter updates for space applications, with particular emphasis on non-Gaussian uncertainty, polynomial estimators, and sigma-point methods.",
+    methods: [
+      "Kalman Filtering",
+      "QEKF / QUKF",
+      "Polynomial Filtering",
+      "Sigma-Point Methods",
+      "Conjugate Unscented Transformation",
+      "Monte Carlo Analysis",
+      "Clohessy-Wiltshire Dynamics",
+      "CR3BP",
+    ],
+    projects: [
+      {
+        title: "Quadratic Extended and Unscented Kalman Filtering",
+        meta: "SPACE Laboratory · Iowa State University · May 2024 – Present",
+        description:
+          "Development of Quadratic Extended and Unscented Kalman Filters using quadratic approximations of the minimum mean-square-error estimator, extending conventional EKF and UKF measurement updates beyond affine dependence on the measurement.",
+        highlights: [
+          "Incorporated higher-order central moments, including skewness and kurtosis, into nonlinear measurement updates under non-Gaussian uncertainty.",
+          "Benchmarked quadratic filters against EKF and UKF baselines.",
+          "In a nonlinear scalar test, QUKF reduced RMSE from 0.0395 to 0.0290, approximately a 27% reduction.",
+          "Evaluated performance on Clohessy-Wiltshire dynamics under non-Gaussian measurement noise.",
+        ],
+      },
+      {
+        title:
+          "Higher-Order Polynomial Filtering and Conjugate Unscented Transformation",
+        meta: "SPACE Laboratory · Iowa State University",
+        description:
+          "Generalization of the quadratic measurement update to arbitrary-order polynomial minimum mean-square-error estimators while retaining a recursive Kalman-filter architecture.",
+        highlights: [
+          "Integrated Conjugate Unscented Transformation rules to evaluate higher-order moments required by polynomial filtering.",
+          "Applied polynomial-CUT filters to Clohessy-Wiltshire and Circular Restricted Three-Body Problem dynamics.",
+          "Investigated estimation accuracy and covariance consistency under non-Gaussian measurement uncertainty.",
+        ],
+      },
+    ],
   },
-  {
-    title: "Future Work in Space-State Estimation",
-    description:
-      "This section can later include additional work in navigation, autonomy, uncertainty-aware estimation, and filtering methods for aerospace systems.",
-    status: "Future Direction",
-  },
-];
 
-const materialsProjects = [
   {
-    title: "ML-Based Prediction of Mechanical and Wear Characterization of Composites",
-    description:
-      "Research on machine learning methods for predicting mechanical and wear behavior of composite materials, with applications to engineering material characterization.",
-    status: "Current Research",
+    id: "optimal-control",
+    number: "02",
+    title: "Optimal Control",
+    summary:
+      "My optimal-control research focuses on stochastic optimal control, covariance steering, nonlinear optimization, and trajectory optimization for dynamical systems.",
+    methods: [
+      "Stochastic Optimal Control",
+      "Covariance Steering",
+      "LEQG",
+      "Nonlinear Optimization",
+      "Trajectory Optimization",
+      "Newton Methods",
+      "Backtracking Line Search",
+    ],
+    projects: [
+      {
+        title: "Linear Exponential Quadratic Gaussian Covariance Steering",
+        meta: "Iowa State University · August 2026 – Present",
+        description:
+          "Research on continuous-time Linear Exponential Quadratic Gaussian covariance steering between prescribed Gaussian endpoint covariances.",
+        highlights: [
+          "Derived the optimal risk-sensitive linear state-feedback structure.",
+          "Established local existence and uniqueness near the corresponding risk-neutral covariance-steering solution.",
+          "Implemented Newton's method with backtracking line search for the resulting implicit nonlinear matrix equation.",
+          "Demonstrated the method on a noisy double-integrator system.",
+        ],
+      },
+      {
+        title: "Titan Parafoil Terminal-Descent Optimization",
+        meta: "February 2025 – May 2025",
+        description:
+          "A nonlinear trajectory-optimization study for terminal descent and soft landing of a parafoil vehicle in the Titan environment.",
+        highlights: [
+          "Formulated a nonconvex trajectory-optimization problem for terminal descent and soft landing.",
+          "Implemented glide-slope, pointing-angle, and virtual-control constraints.",
+          "Evaluated the guidance formulation across varying initial states.",
+        ],
+      },
+    ],
   },
+
   {
-    title: "Future Work in AI/ML for Engineering Materials",
-    description:
-      "This section can later include additional work in data-driven materials modeling, predictive analytics, and material performance characterization.",
-    status: "Future Direction",
+    id: "materials-ml",
+    number: "03",
+    title: "AI/ML for Engineering Materials",
+    summary:
+      "My work in this area applies machine-learning and statistical methods to the prediction and characterization of mechanical and wear behavior in composite materials.",
+    methods: [
+      "Machine Learning",
+      "Taguchi Design of Experiments",
+      "Linear Regression",
+      "Decision Trees",
+      "Random Forest",
+      "Support Vector Regression",
+      "Artificial Neural Networks",
+      "Composite Materials",
+    ],
+    projects: [
+      {
+        title:
+          "Machine Learning for Mechanical and Wear Characterization of Hybrid Composites",
+        meta:
+          "Vellore Institute of Technology · May 2023 – May 2025",
+        description:
+          "Investigation of sisal-fiber, dolomite-dust, and epoxy hybrid composites combined with machine-learning models for material-property and wear prediction.",
+        highlights: [
+          "Investigated hand-laid sisal-fiber/dolomite-dust/epoxy hybrid composites.",
+          "The reported 15 wt% dolomite formulation increased tensile strength by 177% and flexural strength by 127% relative to the unfilled specimen.",
+          "Applied a Taguchi L16 design of experiments to sliding-wear characterization.",
+          "Evaluated linear regression, decision tree, random forest, support vector regression, and artificial neural network models for material-property prediction.",
+        ],
+      },
+    ],
   },
 ];
 ---
@@ -34,11 +126,14 @@ const materialsProjects = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Research | Your Name</title>
+
+    <title>Research | Chiran Binnu Cherian</title>
+
     <meta
       name="description"
-      content="Research areas and projects in space autonomy, navigation, estimation, and AI/ML for engineering materials."
+      content="Research by Chiran Binnu Cherian in spacecraft navigation and estimation, optimal control, covariance steering, and AI/ML for engineering materials."
     />
+
     <style>
       html {
         scroll-behavior: smooth;
@@ -47,129 +142,356 @@ const materialsProjects = [
   </head>
 
   <body class="bg-slate-950 text-white overflow-x-hidden">
-    <!-- top navigation -->
-    <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
-      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="/" class="text-lg font-semibold tracking-wide text-white">
-          Your Name
+
+    <!-- =========================================================
+         NAVIGATION
+    ========================================================== -->
+    <header
+      class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur"
+    >
+      <nav
+        class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
+      >
+        <a
+          href="/"
+          class="text-lg font-semibold tracking-wide text-white"
+        >
+          Chiran Binnu Cherian
         </a>
 
         <div class="hidden gap-6 text-sm text-slate-300 md:flex">
-          <a href="/" class="transition hover:text-cyan-300">Home</a>
-          <a href="/about" class="transition hover:text-cyan-300">About</a>
-          <a href="/research" class="transition hover:text-cyan-300">Research</a>
-          <a href="/publications" class="transition hover:text-cyan-300">Publications</a>
-          <a href="/experience" class="transition hover:text-cyan-300">Experience</a>
-          <a href="/news" class="transition hover:text-cyan-300">News</a>
-          <a href="/#contact" class="transition hover:text-cyan-300">Contact</a>
+          <a href="/" class="transition hover:text-cyan-300">
+            Home
+          </a>
+
+          <a href="/about" class="transition hover:text-cyan-300">
+            About
+          </a>
+
+          <a href="/research" class="font-medium text-cyan-300">
+            Research
+          </a>
+
+          <a
+            href="/publications"
+            class="transition hover:text-cyan-300"
+          >
+            Publications
+          </a>
+
+          <a
+            href="/experience"
+            class="transition hover:text-cyan-300"
+          >
+            Experience
+          </a>
+
+          <a href="/news" class="transition hover:text-cyan-300">
+            News
+          </a>
+
+          <a
+            href="/#contact"
+            class="transition hover:text-cyan-300"
+          >
+            Contact
+          </a>
         </div>
       </nav>
     </header>
 
-    <!-- page hero -->
+
     <main>
-      <section class="relative overflow-hidden px-6 py-24">
-        <div class="absolute inset-0 pointer-events-none">
-          <div class="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/5 blur-3xl"></div>
+
+      <!-- =========================================================
+           RESEARCH HERO
+      ========================================================== -->
+      <section class="relative overflow-hidden px-6 py-24 sm:py-28">
+
+        <!-- Background glow -->
+        <div class="pointer-events-none absolute inset-0">
+          <div
+            class="absolute left-1/2 top-1/2 h-[650px] w-[650px]
+                   -translate-x-1/2 -translate-y-1/2
+                   rounded-full bg-cyan-400/5 blur-3xl"
+          >
+          </div>
+
+          <!-- Subtle orbital rings -->
+          <div
+            class="absolute left-1/2 top-1/2 h-[420px] w-[420px]
+                   -translate-x-1/2 -translate-y-1/2
+                   rounded-full border border-white/5"
+          >
+          </div>
+
+          <div
+            class="absolute left-1/2 top-1/2 h-[570px] w-[570px]
+                   -translate-x-1/2 -translate-y-1/2
+                   rounded-full border border-white/5"
+          >
+          </div>
         </div>
 
         <div class="relative mx-auto max-w-5xl text-center">
-          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">
+
+          <p
+            class="text-sm uppercase tracking-[0.3em] text-cyan-300/80"
+          >
             Research
           </p>
-          <h1 class="mt-4 text-4xl font-bold sm:text-5xl">
+
+          <h1
+            class="mt-4 text-4xl font-bold tracking-tight
+                   sm:text-5xl lg:text-6xl"
+          >
             Research Constellations
           </h1>
-          <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-            My work currently spans two broad directions: space autonomy,
-            navigation, and estimation; and AI/ML for engineering materials.
-            These themes are designed to grow as my research expands.
-          </p>
-        </div>
-      </section>
 
-      <!-- research area 1 -->
-      <section id="space-estimation" class="border-t border-white/10 bg-slate-900/60 px-6 py-20">
-        <div class="mx-auto max-w-6xl">
-          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">
-            Research Area 1
-          </p>
-          <h2 class="mt-3 text-3xl font-bold">
-            Space Autonomy, Navigation, and Estimation
-          </h2>
-          <p class="mt-5 max-w-3xl leading-8 text-slate-300">
-            This area focuses on estimation, filtering, and autonomy-related
-            methods for space applications. It includes current work in
-            polynomial Kalman filtering and can later grow into broader topics
-            such as navigation, uncertainty-aware estimation, and autonomous
-            aerospace systems.
-          </p>
-
-          <div class="mt-10 grid gap-6 md:grid-cols-2">
-            {spaceProjects.map((project) => (
-              <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
-                <p class="text-sm uppercase tracking-wide text-cyan-300/80">
-                  {project.status}
-                </p>
-                <h3 class="mt-3 text-2xl font-semibold">{project.title}</h3>
-                <p class="mt-4 leading-7 text-slate-300">{project.description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <!-- research area 2 -->
-      <section id="materials-ml" class="px-6 py-20">
-        <div class="mx-auto max-w-6xl">
-          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">
-            Research Area 2
-          </p>
-          <h2 class="mt-3 text-3xl font-bold">
-            AI/ML for Engineering Materials
-          </h2>
-          <p class="mt-5 max-w-3xl leading-8 text-slate-300">
-            This area focuses on machine learning approaches for engineering
-            materials, especially predictive modeling of mechanical and wear
-            characterization in composites. It can later expand into broader
-            data-driven materials modeling and materials informatics topics.
-          </p>
-
-          <div class="mt-10 grid gap-6 md:grid-cols-2">
-            {materialsProjects.map((project) => (
-              <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
-                <p class="text-sm uppercase tracking-wide text-cyan-300/80">
-                  {project.status}
-                </p>
-                <h3 class="mt-3 text-2xl font-semibold">{project.title}</h3>
-                <p class="mt-4 leading-7 text-slate-300">{project.description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <!-- closing section -->
-      <section class="border-t border-white/10 bg-slate-900/60 px-6 py-20">
-        <div class="mx-auto max-w-5xl text-center">
-          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">
-            Outlook
-          </p>
-          <h2 class="mt-3 text-3xl font-bold">An expanding research profile</h2>
-          <p class="mx-auto mt-6 max-w-3xl leading-8 text-slate-300">
-            These two research directions provide a flexible structure for
-            presenting both current work and future related projects, papers,
-            and collaborations.
-          </p>
-
-          <a
-            href="/#contact"
-            class="mt-8 inline-block rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition hover:border-cyan-300/40 hover:bg-cyan-300/10"
+          <p
+            class="mx-auto mt-6 max-w-3xl text-lg leading-8
+                   text-slate-300"
           >
-            Get in touch
-          </a>
+            My research spans three connected directions:
+            spacecraft autonomy, navigation, and estimation;
+            optimal control; and artificial intelligence and
+            machine learning for engineering materials.
+          </p>
+
+          <!-- Research-area navigation -->
+          <div class="mt-10 flex flex-wrap justify-center gap-3">
+
+            <a
+              href="#space-estimation"
+              class="rounded-xl border border-cyan-300/30
+                     bg-cyan-300/5 px-4 py-2.5 text-sm
+                     font-medium text-cyan-200 transition
+                     hover:bg-cyan-300/10"
+            >
+              Space Navigation & Estimation
+            </a>
+
+            <a
+              href="#optimal-control"
+              class="rounded-xl border border-cyan-300/30
+                     bg-cyan-300/5 px-4 py-2.5 text-sm
+                     font-medium text-cyan-200 transition
+                     hover:bg-cyan-300/10"
+            >
+              Optimal Control
+            </a>
+
+            <a
+              href="#materials-ml"
+              class="rounded-xl border border-cyan-300/30
+                     bg-cyan-300/5 px-4 py-2.5 text-sm
+                     font-medium text-cyan-200 transition
+                     hover:bg-cyan-300/10"
+            >
+              AI/ML for Engineering Materials
+            </a>
+
+          </div>
         </div>
       </section>
+
+
+      <!-- =========================================================
+           RESEARCH AREAS
+      ========================================================== -->
+      {
+        researchAreas.map((area, areaIndex) => (
+          <section
+            id={area.id}
+            class:list={[
+              "scroll-mt-24 border-t border-white/10 px-6 py-20",
+              areaIndex % 2 === 0
+                ? "bg-slate-900/60"
+                : "bg-slate-950",
+            ]}
+          >
+            <div class="mx-auto max-w-6xl">
+
+              <!-- Area heading -->
+              <div class="grid gap-8 lg:grid-cols-[150px_1fr]">
+
+                <div>
+                  <div
+                    class="flex h-16 w-16 items-center justify-center
+                           rounded-full border border-cyan-300/30
+                           bg-cyan-300/5 text-lg font-semibold
+                           text-cyan-300"
+                  >
+                    {area.number}
+                  </div>
+                </div>
+
+                <div>
+                  <p
+                    class="text-sm uppercase tracking-[0.3em]
+                           text-cyan-300/80"
+                  >
+                    Research Area
+                  </p>
+
+                  <h2
+                    class="mt-3 text-3xl font-bold tracking-tight
+                           sm:text-4xl"
+                  >
+                    {area.title}
+                  </h2>
+
+                  <p
+                    class="mt-6 max-w-4xl text-base leading-8
+                           text-slate-300"
+                  >
+                    {area.summary}
+                  </p>
+
+                  <!-- Method tags -->
+                  <div class="mt-7 flex flex-wrap gap-2">
+                    {
+                      area.methods.map((method) => (
+                        <span
+                          class="rounded-full border border-white/10
+                                 bg-white/5 px-3 py-1.5 text-xs
+                                 text-slate-300"
+                        >
+                          {method}
+                        </span>
+                      ))
+                    }
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Projects -->
+              <div class="mt-12 space-y-6">
+
+                {
+                  area.projects.map((project) => (
+                    <article
+                      class="rounded-3xl border border-white/10
+                             bg-white/[0.04] p-7 shadow-xl
+                             backdrop-blur sm:p-8"
+                    >
+                      <p
+                        class="text-sm font-medium text-cyan-300/90"
+                      >
+                        {project.meta}
+                      </p>
+
+                      <h3
+                        class="mt-3 text-2xl font-semibold
+                               tracking-tight"
+                      >
+                        {project.title}
+                      </h3>
+
+                      <p
+                        class="mt-5 max-w-4xl leading-8
+                               text-slate-300"
+                      >
+                        {project.description}
+                      </p>
+
+                      <div class="mt-7">
+                        <p
+                          class="text-sm font-semibold uppercase
+                                 tracking-[0.15em] text-slate-400"
+                        >
+                          Highlights
+                        </p>
+
+                        <ul
+                          class="mt-4 space-y-3 text-slate-300"
+                        >
+                          {
+                            project.highlights.map((highlight) => (
+                              <li class="flex gap-3 leading-7">
+                                <span
+                                  class="mt-[0.65rem] h-1.5 w-1.5
+                                         flex-none rounded-full
+                                         bg-cyan-300"
+                                >
+                                </span>
+
+                                <span>{highlight}</span>
+                              </li>
+                            ))
+                          }
+                        </ul>
+                      </div>
+                    </article>
+                  ))
+                }
+
+              </div>
+            </div>
+          </section>
+        ))
+      }
+
+
+      <!-- =========================================================
+           EXPLORE MORE
+      ========================================================== -->
+      <section
+        class="border-t border-white/10 bg-slate-900/60
+               px-6 py-20"
+      >
+        <div class="mx-auto max-w-5xl text-center">
+
+          <p
+            class="text-sm uppercase tracking-[0.3em]
+                   text-cyan-300/80"
+          >
+            Explore Further
+          </p>
+
+          <h2 class="mt-3 text-3xl font-bold">
+            Publications and experience
+          </h2>
+
+          <p
+            class="mx-auto mt-6 max-w-2xl leading-8
+                   text-slate-300"
+          >
+            Explore my publications for the scholarly output
+            associated with these research directions, or view my
+            experience for additional academic, teaching, and
+            engineering work.
+          </p>
+
+          <div
+            class="mt-8 flex flex-wrap justify-center gap-3"
+          >
+            <a
+              href="/publications"
+              class="rounded-xl border border-cyan-300/30
+                     px-5 py-2.5 text-sm font-medium
+                     text-cyan-200 transition
+                     hover:bg-cyan-300/10"
+            >
+              View Publications
+            </a>
+
+            <a
+              href="/experience"
+              class="rounded-xl border border-white/15
+                     bg-white/5 px-5 py-2.5 text-sm
+                     font-medium text-white transition
+                     hover:border-cyan-300/30
+                     hover:bg-cyan-300/10"
+            >
+              View Experience
+            </a>
+          </div>
+
+        </div>
+      </section>
+
     </main>
   </body>
 </html>
