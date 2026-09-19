@@ -1,15 +1,15 @@
-import type { APIRoute } from 'astro';
-import {template} from '@/settings';
+import type { APIRoute } from "astro";
 
-const getRobotsTxt = (sitemapURL: URL) => `
-User-agent: *
+const getRobotsTxt = (sitemapURL: URL) => `User-agent: *
 Allow: /
 
 Sitemap: ${sitemapURL.href}
 `;
 
 export const GET: APIRoute = ({ site }) => {
-const base = template.base ? template.base + '/' : '';
-  const sitemapURL = new URL(`${base}sitemap-index.xml`, site);
-  return new Response(getRobotsTxt(sitemapURL));
+  const baseURL = site ?? new URL("https://chiranbc.github.io");
+  const sitemapURL = new URL("/sitemap-index.xml", baseURL);
+  return new Response(getRobotsTxt(sitemapURL), {
+    headers: { "Content-Type": "text/plain; charset=utf-8" },
+  });
 };

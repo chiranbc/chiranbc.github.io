@@ -1,0 +1,78 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  path?: string;
+  image?: string;
+  type?: "website" | "article";
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  path = Astro.url.pathname,
+  image = "/social-preview.png",
+  type = "website",
+  noindex = false,
+} = Astro.props;
+
+const site = Astro.site ?? new URL("https://chiranbc.github.io");
+const canonicalURL = new URL(path, site);
+const imageURL = new URL(image, site);
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Chiran Binnu Cherian",
+  url: new URL("/", site).toString(),
+  image: imageURL.toString(),
+  jobTitle: "Ph.D. Student in Aerospace Engineering",
+  affiliation: {
+    "@type": "CollegeOrUniversity",
+    name: "Iowa State University",
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/chiran-cherian/",
+    "https://scholar.google.com/citations?user=gJAFxi8AAAAJ&hl=en",
+    "https://www.researchgate.net/profile/Chiran-Cherian?ev=hdr_xprf",
+    "https://github.com/chiranbc",
+  ],
+};
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="author" content="Chiran Binnu Cherian" />
+<meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
+<meta name="generator" content={Astro.generator} />
+<meta name="theme-color" content="#020617" />
+
+<link rel="canonical" href={canonicalURL.toString()} />
+<link rel="sitemap" href={new URL("/sitemap-index.xml", site).toString()} />
+
+<meta property="og:type" content={type} />
+<meta property="og:site_name" content="Chiran Binnu Cherian" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL.toString()} />
+<meta property="og:image" content={imageURL.toString()} />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta
+  property="og:image:alt"
+  content="Chiran Binnu Cherian — Aerospace Engineering, spacecraft estimation, optimal control, and machine learning"
+/>
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageURL.toString()} />
+<meta
+  name="twitter:image:alt"
+  content="Chiran Binnu Cherian — Aerospace Engineering, spacecraft estimation, optimal control, and machine learning"
+/>
+
+<script type="application/ld+json" set:html={JSON.stringify(personSchema)}></script>

@@ -1,6 +1,7 @@
 ---
 import TopNavbar from "../components/ui/TopNavbar.astro";
 import SiteFooter from "../components/ui/SiteFooter.astro";
+import SEO from "../components/ui/SEO.astro";
 
 const peerReviewed = [
   {
@@ -94,11 +95,11 @@ const areaCounts = {
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Publications | Chiran Binnu Cherian</title>
-    <meta
-      name="description"
-      content="Peer-reviewed publications and manuscripts by Chiran Binnu Cherian in spacecraft estimation, optimal control, and machine learning for engineering materials."
+    <SEO
+      title="Publications | Chiran Binnu Cherian"
+      description="Peer-reviewed publications and research manuscripts by Chiran Binnu Cherian in spacecraft estimation, optimal control, and machine learning for engineering materials."
     />
+
     <style>
       html {
         scroll-behavior: smooth;
@@ -109,7 +110,7 @@ const areaCounts = {
   <body class="bg-slate-950 text-white overflow-x-hidden">
     <TopNavbar />
 
-    <main>
+    <main id="main-content">
       <!-- =========================================================
            HERO
       ========================================================== -->

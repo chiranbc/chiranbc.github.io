@@ -1,0 +1,23 @@
+---
+const destination = "/publications";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publications | Chiran Binnu Cherian</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta http-equiv="refresh" content={`0;url=${destination}`} />
+    <link rel="canonical" href={new URL(destination, Astro.site ?? Astro.url.origin).toString()} />
+  </head>
+  <body>
+    <p>
+      This page has moved. If you are not redirected automatically,
+      <a href={destination}>view publications</a>.
+    </p>
+    <script is:inline define:vars={{ destination }}>
+      window.location.replace(destination);
+    </script>
+  </body>
+</html>

@@ -1,6 +1,7 @@
 ---
 import TopNavbar from "../components/ui/TopNavbar.astro";
 import SiteFooter from "../components/ui/SiteFooter.astro";
+import SEO from "../components/ui/SEO.astro";
 
 const education = [
   {
@@ -133,12 +134,9 @@ const quickLinks = [
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-
-    <title>About | Chiran Binnu Cherian</title>
-
-    <meta
-      name="description"
-      content="About Chiran Binnu Cherian, Ph.D. student in Aerospace Engineering at Iowa State University researching spacecraft estimation, optimal control, and machine learning."
+    <SEO
+      title="About | Chiran Binnu Cherian"
+      description="About Chiran Binnu Cherian, Ph.D. student in Aerospace Engineering at Iowa State University researching spacecraft estimation, optimal control, and machine learning."
     />
 
     <style>
@@ -152,7 +150,7 @@ const quickLinks = [
 
     <TopNavbar />
     
-    <main>
+    <main id="main-content">
 
       <!-- =========================================================
            HERO
@@ -202,6 +200,11 @@ const quickLinks = [
               <img
                 src="/profile.jpg"
                 alt="Chiran Binnu Cherian"
+                width="1021"
+                height="1179"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
                 class="aspect-square w-full object-cover"
               />
             </div>

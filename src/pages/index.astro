@@ -1,6 +1,7 @@
 ---
 import TopNavbar from "../components/ui/TopNavbar.astro";
 import SiteFooter from "../components/ui/SiteFooter.astro";
+import SEO from "../components/ui/SEO.astro";
 
 const researchAreas = [
   {
@@ -110,14 +111,9 @@ const missionLog = [
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-
-    <title>
-      Chiran Binnu Cherian | Aerospace Engineering Researcher
-    </title>
-
-    <meta
-      name="description"
-      content="Personal research website of Chiran Binnu Cherian, Ph.D. student in Aerospace Engineering at Iowa State University working in spacecraft estimation, optimal control, and machine learning."
+    <SEO
+      title="Chiran Binnu Cherian | Aerospace Engineering Researcher"
+      description="Personal research website of Chiran Binnu Cherian, Ph.D. student in Aerospace Engineering at Iowa State University working in spacecraft estimation, optimal control, and machine learning."
     />
 
     <style>
@@ -158,7 +154,7 @@ const missionLog = [
     <TopNavbar />
 
 
-    <main>
+    <main id="main-content">
 
       <!-- =========================================================
            HERO
@@ -251,6 +247,11 @@ const missionLog = [
                 <img
                   src="/profile.jpg"
                   alt="Chiran Binnu Cherian"
+                  width="1021"
+                  height="1179"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
                   class="h-full w-full object-cover"
                 />
               </div>
@@ -335,6 +336,11 @@ const missionLog = [
                 <img
                   src="/profile.jpg"
                   alt="Chiran Binnu Cherian"
+                  width="1021"
+                  height="1179"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
                   class="h-full w-full object-cover"
                 />
               </div>

@@ -1,6 +1,7 @@
 ---
 import TopNavbar from "../components/ui/TopNavbar.astro";
 import SiteFooter from "../components/ui/SiteFooter.astro";
+import SEO from "../components/ui/SEO.astro";
 
 const recentUpdates = [
   {
@@ -136,12 +137,9 @@ const categoryStyle = {
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-
-    <title>News | Chiran Binnu Cherian</title>
-
-    <meta
-      name="description"
-      content="Research updates, publications, projects, teaching milestones, and academic news from Chiran Binnu Cherian."
+    <SEO
+      title="News | Chiran Binnu Cherian"
+      description="Research updates, publications, academic milestones, teaching activities, and professional news from Chiran Binnu Cherian."
     />
 
     <style>
@@ -159,7 +157,7 @@ const categoryStyle = {
     <TopNavbar />
 
 
-    <main>
+    <main id="main-content">
 
       <!-- =========================================================
            HERO

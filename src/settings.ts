@@ -50,5 +50,5 @@ export const seo = {
 	default_title: 'Chiran Binnu Cherian | Aerospace Engineering Researcher',
 	default_description:
 		'Personal research website of Chiran Binnu Cherian, Ph.D. student in Aerospace Engineering at Iowa State University.',
-	default_image: '/profile.jpg',
+	default_image: '/social-preview.png',
 }

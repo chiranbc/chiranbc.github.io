@@ -1,6 +1,7 @@
 ---
 import TopNavbar from "../components/ui/TopNavbar.astro";
 import SiteFooter from "../components/ui/SiteFooter.astro";
+import SEO from "../components/ui/SEO.astro";
 
 const researchExperience = [
   {
@@ -145,11 +146,11 @@ const leadership = [
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Experience | Chiran Binnu Cherian</title>
-    <meta
-      name="description"
-      content="Research, engineering, teaching, technical project, and leadership experience of Chiran Binnu Cherian."
+    <SEO
+      title="Experience | Chiran Binnu Cherian"
+      description="Research, engineering, teaching, technical project, and leadership experience of Chiran Binnu Cherian."
     />
+
     <style>
       html {
         scroll-behavior: smooth;
@@ -160,7 +161,7 @@ const leadership = [
   <body class="bg-slate-950 text-white overflow-x-hidden">
     <TopNavbar />
 
-    <main>
+    <main id="main-content">
       <!-- =========================================================
            HERO
       ========================================================== -->

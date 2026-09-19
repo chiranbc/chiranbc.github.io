@@ -1,6 +1,7 @@
 ---
 import TopNavbar from "../components/ui/TopNavbar.astro";
 import SiteFooter from "../components/ui/SiteFooter.astro";
+import SEO from "../components/ui/SEO.astro";
 
 const researchAreas = [
   {
@@ -130,12 +131,9 @@ const researchAreas = [
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Research | Chiran Binnu Cherian</title>
-
-    <meta
-      name="description"
-      content="Research by Chiran Binnu Cherian in spacecraft navigation and estimation, optimal control, covariance steering, and AI/ML for engineering materials."
+    <SEO
+      title="Research | Chiran Binnu Cherian"
+      description="Research by Chiran Binnu Cherian in spacecraft autonomy, navigation and estimation, optimal control, covariance steering, and AI/ML for engineering materials."
     />
 
     <style>
@@ -153,7 +151,7 @@ const researchAreas = [
     <TopNavbar />
 
 
-    <main>
+    <main id="main-content">
 
       <!-- =========================================================
            RESEARCH HERO
