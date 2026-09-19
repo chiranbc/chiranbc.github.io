@@ -1,4 +1,7 @@
 ---
+import TopNavbar from "../components/ui/TopNavbar.astro";
+import SiteFooter from "../components/ui/SiteFooter.astro";
+
 const researchAreas = [
   {
     name: "Space Autonomy, Navigation, and Estimation",
@@ -7,8 +10,8 @@ const researchAreas = [
     left: "50%",
   },
   {
-    name: "Stochastic Optimal Control",
-    href: "/research#stochastic-optimal-control",
+    name: "Optimal Control",
+    href: "/research#optimal-control",
     top: "72%",
     left: "20%",
   },
@@ -101,6 +104,7 @@ const missionLog = [
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <meta
       name="viewport"
@@ -151,75 +155,7 @@ const missionLog = [
     <!-- =========================================================
          NAVIGATION
     ========================================================== -->
-    <header
-      class="sticky top-0 z-50 border-b border-white/10
-             bg-slate-950/85 backdrop-blur"
-    >
-      <nav
-        class="mx-auto flex max-w-6xl items-center
-               justify-between px-6 py-4"
-      >
-        <a
-          href="/"
-          class="text-lg font-semibold tracking-wide text-white"
-        >
-          Chiran Binnu Cherian
-        </a>
-
-        <div class="hidden gap-6 text-sm text-slate-300 md:flex">
-
-          <a
-            href="/"
-            class="font-medium text-cyan-300"
-          >
-            Home
-          </a>
-
-          <a
-            href="/about"
-            class="transition hover:text-cyan-300"
-          >
-            About
-          </a>
-
-          <a
-            href="/research"
-            class="transition hover:text-cyan-300"
-          >
-            Research
-          </a>
-
-          <a
-            href="/publications"
-            class="transition hover:text-cyan-300"
-          >
-            Publications
-          </a>
-
-          <a
-            href="/experience"
-            class="transition hover:text-cyan-300"
-          >
-            Experience
-          </a>
-
-          <a
-            href="/news"
-            class="transition hover:text-cyan-300"
-          >
-            News
-          </a>
-
-          <a
-            href="#contact"
-            class="transition hover:text-cyan-300"
-          >
-            Contact
-          </a>
-
-        </div>
-      </nav>
-    </header>
+    <TopNavbar />
 
 
     <main>
@@ -228,7 +164,7 @@ const missionLog = [
            HERO
       ========================================================== -->
       <section
-        class="relative min-h-[860px] overflow-hidden px-6 py-20"
+        class="relative overflow-hidden px-6 py-16 sm:py-20 md:min-h-[860px]"
       >
 
         <!-- Background glows -->
@@ -302,12 +238,55 @@ const missionLog = [
           </div>
 
 
+          <!-- Mobile research overview -->
+          <div class="mx-auto mt-10 max-w-md md:hidden">
+            <div
+              class="rounded-3xl border border-cyan-300/20
+                     bg-slate-900/95 p-6 text-center shadow-xl"
+            >
+              <div
+                class="mx-auto h-28 w-28 overflow-hidden rounded-full
+                       border-2 border-cyan-300/30"
+              >
+                <img
+                  src="/profile.jpg"
+                  alt="Chiran Binnu Cherian"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <p class="mt-4 font-semibold text-white">Chiran Binnu Cherian</p>
+              <p class="mt-1 text-sm text-slate-400">
+                Estimation · Control · Autonomy · ML
+              </p>
+            </div>
+
+            <div class="mt-5 grid gap-3">
+              {
+                researchAreas.map((area, index) => (
+                  <a
+                    href={area.href}
+                    class="rounded-2xl border border-cyan-300/20
+                           bg-white/[0.04] p-4 transition
+                           hover:border-cyan-300/50 hover:bg-cyan-300/10"
+                  >
+                    <span class="text-xs font-semibold text-cyan-300">
+                      0{index + 1}
+                    </span>
+                    <span class="ml-3 text-sm font-medium text-slate-100">
+                      {area.name}
+                    </span>
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+
           <!-- =====================================================
                ORBITAL RESEARCH MAP
           ====================================================== -->
           <div
-            class="relative mx-auto mt-14
-                   h-[470px] max-w-[760px]"
+            class="relative mx-auto mt-14 hidden
+                   h-[470px] max-w-[760px] md:block"
           >
 
             <!-- Orbit Rings -->
@@ -1108,34 +1087,7 @@ const missionLog = [
     </main>
 
 
-    <!-- =========================================================
-         FOOTER
-    ========================================================== -->
-    <footer
-      class="border-t border-white/10
-             px-6 py-8"
-    >
-
-      <div
-        class="mx-auto flex max-w-6xl
-               flex-col gap-3 text-center
-               text-sm text-slate-500
-               sm:flex-row sm:items-center
-               sm:justify-between
-               sm:text-left"
-      >
-
-        <p>
-          © 2026 Chiran Binnu Cherian
-        </p>
-
-        <p>
-          Aerospace Engineering · Estimation · Control · Autonomy
-        </p>
-
-      </div>
-
-    </footer>
+    <SiteFooter />
 
   </body>
 </html>

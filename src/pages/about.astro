@@ -1,4 +1,7 @@
 ---
+import TopNavbar from "../components/ui/TopNavbar.astro";
+import SiteFooter from "../components/ui/SiteFooter.astro";
+
 const education = [
   {
     degree: "Ph.D. in Aerospace Engineering",
@@ -124,6 +127,7 @@ const quickLinks = [
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <meta
       name="viewport"
@@ -135,51 +139,19 @@ const quickLinks = [
     <meta
       name="description"
       content="About Chiran Binnu Cherian, Ph.D. student in Aerospace Engineering at Iowa State University researching spacecraft estimation, optimal control, and machine learning."
-            class="font-medium text-cyan-300"
-          >
-            About
-          </a>
+    />
 
-          <a
-            href="/research"
-            class="transition hover:text-cyan-300"
-          >
-            Research
-          </a>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
 
-          <a
-            href="/publications"
-            class="transition hover:text-cyan-300"
-          >
-            Publications
-          </a>
+  <body class="bg-slate-950 text-white overflow-x-hidden">
 
-          <a
-            href="/experience"
-            class="transition hover:text-cyan-300"
-          >
-            Experience
-          </a>
-
-          <a
-            href="/news"
-            class="transition hover:text-cyan-300"
-          >
-            News
-          </a>
-
-          <a
-            href="/#contact"
-            class="transition hover:text-cyan-300"
-          >
-            Contact
-          </a>
-
-        </div>
-      </nav>
-    </header>
-
-
+    <TopNavbar />
+    
     <main>
 
       <!-- =========================================================
@@ -695,6 +667,8 @@ const quickLinks = [
       </section>
 
     </main>
+
+    <SiteFooter />
 
   </body>
 </html>

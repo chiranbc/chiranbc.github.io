@@ -1,40 +1,54 @@
 export const profile = {
-	fullName: 'Your Name',
-	title: '',
-	institute: '',
-	author_name: '', // Author name to be highlighted in the papers section
+	fullName: 'Chiran Binnu Cherian',
+	title: 'Ph.D. Student in Aerospace Engineering',
+	institute: 'Iowa State University',
+	author_name: 'C. B. Cherian',
 	research_areas: [
-		// { title: 'Physics', description: 'Brief description of the research interest', field: 'physics' },
+		{
+			title: 'Space Autonomy, Navigation, and Estimation',
+			description: 'Nonlinear and higher-order filtering for spacecraft navigation and estimation.',
+			field: 'space-estimation',
+		},
+		{
+			title: 'Optimal Control',
+			description: 'Stochastic optimal control, covariance steering, and trajectory optimization.',
+			field: 'optimal-control',
+		},
+		{
+			title: 'AI/ML for Engineering Materials',
+			description: 'Machine-learning methods for mechanical and wear characterization of engineering materials.',
+			field: 'materials-ml',
+		},
 	],
 }
 
-// Set equal to an empty string to hide the icon that you don't want to display
 export const social = {
-	email: '',
-	linkedin: '',
-	x: 'https://www.x.com/',
+	email: 'cbckbc@iastate.edu',
+	linkedin: 'https://www.linkedin.com/in/chiran-cherian/',
+	x: '',
 	bluesky: '',
-	github: '',
+	github: 'https://github.com/chiranbc',
 	gitlab: '',
-	scholar: '',
+	scholar: 'https://scholar.google.com/citations?user=gJAFxi8AAAAJ&hl=en',
 	inspire: '',
 	arxiv: '',
 	orcid: '',
 }
 
 export const template = {
-	website_url: 'https://localhost:4321', // Astro needs to know your site’s deployed URL to generate a sitemap. It must start with http:// or https://
+	website_url: 'https://chiranbc.github.io',
 	menu_left: false,
 	transitions: true,
-	lightTheme: 'light', // Select one of the Daisy UI Themes or create your own
-	darkTheme: 'dark', // Select one of the Daisy UI Themes or create your own
+	lightTheme: 'light',
+	darkTheme: 'dark',
 	excerptLength: 200,
 	postPerPage: 5,
-    base: '' // Repository name starting with /
+	base: '',
 }
 
 export const seo = {
-	default_title: 'Astro Academia',
-	default_description: 'Astro Academia is a template for academic websites.',
-	default_image: '/images/astro-academia.png',
+	default_title: 'Chiran Binnu Cherian | Aerospace Engineering Researcher',
+	default_description:
+		'Personal research website of Chiran Binnu Cherian, Ph.D. student in Aerospace Engineering at Iowa State University.',
+	default_image: '/profile.jpg',
 }

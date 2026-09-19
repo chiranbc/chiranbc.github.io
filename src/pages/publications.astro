@@ -1,4 +1,7 @@
 ---
+import TopNavbar from "../components/ui/TopNavbar.astro";
+import SiteFooter from "../components/ui/SiteFooter.astro";
+
 const peerReviewed = [
   {
     title: "Quadratic Extended and Unscented Kalman Filter Updates",
@@ -89,57 +92,24 @@ const areaCounts = {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Publications | Chiran Binnu Cherian</title>
-
     <meta
       name="description"
       content="Peer-reviewed publications and manuscripts by Chiran Binnu Cherian in spacecraft estimation, optimal control, and machine learning for engineering materials."
-            class="transition hover:text-cyan-300"
-          >
-            Research
-          </a>
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
 
-          <a
-            href="/publications"
-            class="font-medium text-cyan-300"
-          >
-            Publications
-          </a>
-
-          <a
-            href="/experience"
-            class="transition hover:text-cyan-300"
-          >
-            Experience
-          </a>
-
-          <a
-            href="/news"
-            class="transition hover:text-cyan-300"
-          >
-            News
-          </a>
-
-          <a
-            href="/#contact"
-            class="transition hover:text-cyan-300"
-          >
-            Contact
-          </a>
-
-        </div>
-      </nav>
-    </header>
-
+  <body class="bg-slate-950 text-white overflow-x-hidden">
+    <TopNavbar />
 
     <main>
-
       <!-- =========================================================
            HERO
       ========================================================== -->
@@ -748,8 +718,8 @@ const areaCounts = {
 
         </div>
       </section>
-
     </main>
+    <SiteFooter />
 
   </body>
 </html>
