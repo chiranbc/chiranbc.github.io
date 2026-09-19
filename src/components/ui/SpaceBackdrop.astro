@@ -1,0 +1,240 @@
+<div class="space-backdrop" aria-hidden="true">
+  <div class="space-stars space-stars-a"></div>
+  <div class="space-stars space-stars-b"></div>
+  <div class="space-nebula space-nebula-cyan"></div>
+  <div class="space-nebula space-nebula-violet"></div>
+
+  <div class="space-planet space-planet-blue"></div>
+
+  <div class="space-ringed-world">
+    <div class="space-ring"></div>
+    <div class="space-ringed-planet"></div>
+  </div>
+
+  <div class="space-system">
+    <div class="space-system-orbit orbit-one"><span class="orbit-planet planet-one"></span></div>
+    <div class="space-system-orbit orbit-two"><span class="orbit-planet planet-two"></span></div>
+    <div class="space-system-orbit orbit-three"><span class="orbit-planet planet-three"></span></div>
+    <span class="space-system-star"></span>
+  </div>
+</div>
+
+<style is:global>
+  .space-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 50% -10%, rgba(18, 91, 118, 0.16), transparent 36%),
+      linear-gradient(180deg, #010205 0%, #02040a 42%, #010205 100%);
+  }
+
+  .space-stars {
+    position: absolute;
+    inset: -15%;
+    opacity: 0.55;
+    transform: rotate(-3deg);
+  }
+
+  .space-stars-a {
+    background-image:
+      radial-gradient(circle, rgba(255,255,255,.95) 0 1px, transparent 1.25px),
+      radial-gradient(circle, rgba(186,230,253,.9) 0 1px, transparent 1.35px),
+      radial-gradient(circle, rgba(255,255,255,.7) 0 .75px, transparent 1px);
+    background-position: 12px 18px, 78px 44px, 138px 106px;
+    background-size: 164px 164px, 221px 221px, 119px 119px;
+  }
+
+  .space-stars-b {
+    opacity: 0.28;
+    filter: blur(.2px);
+    background-image:
+      radial-gradient(circle, rgba(165,243,252,.95) 0 1px, transparent 1.3px),
+      radial-gradient(circle, rgba(216,180,254,.8) 0 1px, transparent 1.35px);
+    background-position: 30px 90px, 170px 20px;
+    background-size: 307px 307px, 389px 389px;
+    animation: star-drift 42s linear infinite alternate;
+  }
+
+  .space-nebula {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(90px);
+    opacity: .17;
+  }
+
+  .space-nebula-cyan {
+    width: 560px;
+    height: 320px;
+    top: 12%;
+    left: 24%;
+    background: radial-gradient(circle, rgba(34,211,238,.75), rgba(14,116,144,.22) 44%, transparent 72%);
+    transform: rotate(-18deg);
+  }
+
+  .space-nebula-violet {
+    width: 520px;
+    height: 360px;
+    right: 4%;
+    bottom: 12%;
+    background: radial-gradient(circle, rgba(139,92,246,.62), rgba(67,56,202,.16) 48%, transparent 74%);
+    transform: rotate(24deg);
+  }
+
+  .space-planet {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow:
+      inset -32px -30px 58px rgba(0,0,0,.78),
+      0 0 54px rgba(56,189,248,.12);
+  }
+
+  .space-planet-blue {
+    width: 330px;
+    height: 330px;
+    top: 7%;
+    right: -145px;
+    opacity: .52;
+    background:
+      radial-gradient(circle at 34% 28%, rgba(224,242,254,.82) 0 2%, transparent 10%),
+      radial-gradient(circle at 33% 31%, #38bdf8 0%, #0e7490 23%, #164e63 46%, #082f49 63%, #020617 78%);
+  }
+
+  .space-ringed-world {
+    position: absolute;
+    width: 330px;
+    height: 240px;
+    left: -115px;
+    bottom: 3%;
+    opacity: .42;
+  }
+
+  .space-ringed-planet {
+    position: absolute;
+    width: 135px;
+    height: 135px;
+    left: 100px;
+    top: 48px;
+    z-index: 2;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 28%, #fef3c7 0%, #d97706 24%, #92400e 50%, #451a03 72%, #0c0a09 84%);
+    box-shadow: inset -22px -18px 35px rgba(0,0,0,.72), 0 0 28px rgba(251,191,36,.12);
+  }
+
+  .space-ring {
+    position: absolute;
+    width: 290px;
+    height: 82px;
+    left: 20px;
+    top: 76px;
+    z-index: 3;
+    border: 5px solid rgba(253,230,138,.22);
+    border-left-color: rgba(253,230,138,.42);
+    border-right-color: rgba(253,230,138,.10);
+    border-radius: 50%;
+    transform: rotate(-16deg);
+    box-shadow: 0 0 12px rgba(251,191,36,.08);
+  }
+
+  .space-system {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 5%;
+    top: 18%;
+    opacity: .30;
+  }
+
+  .space-system-star {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 118px;
+    top: 118px;
+    border-radius: 50%;
+    background: #fef9c3;
+    box-shadow: 0 0 10px #fde68a, 0 0 24px rgba(250,204,21,.68), 0 0 46px rgba(250,204,21,.3);
+  }
+
+  .space-system-orbit {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 1px solid rgba(125,211,252,.18);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotate(-12deg);
+  }
+
+  .orbit-one { width: 80px; height: 44px; }
+  .orbit-two { width: 145px; height: 78px; }
+  .orbit-three { width: 218px; height: 118px; }
+
+  .orbit-planet {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+  }
+
+  .planet-one {
+    width: 7px;
+    height: 7px;
+    right: 8px;
+    top: 4px;
+    background: #67e8f9;
+    box-shadow: 0 0 8px rgba(103,232,249,.45);
+  }
+
+  .planet-two {
+    width: 9px;
+    height: 9px;
+    left: 15px;
+    bottom: 8px;
+    background: #c4b5fd;
+    box-shadow: 0 0 8px rgba(196,181,253,.40);
+  }
+
+  .planet-three {
+    width: 6px;
+    height: 6px;
+    right: 28px;
+    bottom: 10px;
+    background: #fdba74;
+    box-shadow: 0 0 8px rgba(253,186,116,.36);
+  }
+
+  @keyframes star-drift {
+    from { transform: translate3d(-6px, -5px, 0) rotate(-3deg); }
+    to { transform: translate3d(12px, 9px, 0) rotate(-2.2deg); }
+  }
+
+  @media (max-width: 767px) {
+    .space-planet-blue {
+      width: 220px;
+      height: 220px;
+      right: -115px;
+      top: 9%;
+      opacity: .36;
+    }
+
+    .space-ringed-world {
+      left: -165px;
+      bottom: 4%;
+      opacity: .26;
+    }
+
+    .space-system {
+      width: 190px;
+      height: 190px;
+      left: -35px;
+      top: 24%;
+      opacity: .20;
+      transform: scale(.78);
+    }
+
+    .space-nebula {
+      opacity: .11;
+    }
+  }
+</style>

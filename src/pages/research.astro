@@ -1,5 +1,6 @@
 ---
 import TopNavbar from "../components/ui/TopNavbar.astro";
+import SpaceBackdrop from "../components/ui/SpaceBackdrop.astro";
 import SiteFooter from "../components/ui/SiteFooter.astro";
 import SEO from "../components/ui/SEO.astro";
 
@@ -143,15 +144,17 @@ const researchAreas = [
     </style>
   </head>
 
-  <body class="bg-slate-950 text-white overflow-x-hidden">
+  <body class="bg-[#010205] text-white overflow-x-hidden">
 
-    <!-- =========================================================
+    
+    <SpaceBackdrop />
+<!-- =========================================================
          NAVIGATION
     ========================================================== -->
     <TopNavbar />
 
 
-    <main id="main-content">
+    <main id="main-content" class="relative z-10">
 
       <!-- =========================================================
            RESEARCH HERO
@@ -186,7 +189,7 @@ const researchAreas = [
         <div class="relative mx-auto max-w-5xl text-center">
 
           <p
-            class="text-sm uppercase tracking-[0.3em] text-cyan-300/80"
+            class="text-sm uppercase tracking-[0.3em] text-cyan-200"
           >
             Research
           </p>
@@ -256,8 +259,8 @@ const researchAreas = [
             class:list={[
               "scroll-mt-24 border-t border-white/10 px-6 py-20",
               areaIndex % 2 === 0
-                ? "bg-slate-900/60"
-                : "bg-slate-950",
+                ? "bg-black/50"
+                : "bg-black/30",
             ]}
           >
             <div class="mx-auto max-w-6xl">
@@ -279,7 +282,7 @@ const researchAreas = [
                 <div>
                   <p
                     class="text-sm uppercase tracking-[0.3em]
-                           text-cyan-300/80"
+                           text-cyan-200"
                   >
                     Research Area
                   </p>
@@ -327,7 +330,7 @@ const researchAreas = [
                              backdrop-blur sm:p-8"
                     >
                       <p
-                        class="text-sm font-medium text-cyan-300/90"
+                        class="text-sm font-medium text-cyan-200"
                       >
                         {project.meta}
                       </p>
@@ -349,7 +352,7 @@ const researchAreas = [
                       <div class="mt-7">
                         <p
                           class="text-sm font-semibold uppercase
-                                 tracking-[0.15em] text-slate-400"
+                                 tracking-[0.15em] text-slate-300"
                         >
                           Highlights
                         </p>
@@ -388,14 +391,14 @@ const researchAreas = [
            EXPLORE MORE
       ========================================================== -->
       <section
-        class="border-t border-white/10 bg-slate-900/60
+        class="border-t border-white/10 bg-black/50
                px-6 py-20"
       >
         <div class="mx-auto max-w-5xl text-center">
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Explore Further
           </p>

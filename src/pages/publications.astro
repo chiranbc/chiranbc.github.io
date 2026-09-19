@@ -1,5 +1,6 @@
 ---
 import TopNavbar from "../components/ui/TopNavbar.astro";
+import SpaceBackdrop from "../components/ui/SpaceBackdrop.astro";
 import SiteFooter from "../components/ui/SiteFooter.astro";
 import SEO from "../components/ui/SEO.astro";
 
@@ -107,10 +108,12 @@ const areaCounts = {
     </style>
   </head>
 
-  <body class="bg-slate-950 text-white overflow-x-hidden">
-    <TopNavbar />
+  <body class="bg-[#010205] text-white overflow-x-hidden">
+    
+    <SpaceBackdrop />
+<TopNavbar />
 
-    <main id="main-content">
+    <main id="main-content" class="relative z-10">
       <!-- =========================================================
            HERO
       ========================================================== -->
@@ -145,7 +148,7 @@ const areaCounts = {
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Publications
           </p>
@@ -177,7 +180,7 @@ const areaCounts = {
       ========================================================== -->
       <section
         class="border-t border-white/10
-               bg-slate-900/60 px-6 py-14"
+               bg-black/50 px-6 py-14"
       >
         <div
           class="mx-auto grid max-w-5xl gap-4
@@ -195,7 +198,7 @@ const areaCounts = {
             </p>
 
             <p
-              class="mt-2 text-sm text-slate-400"
+              class="mt-2 text-sm text-slate-300"
             >
               Peer-Reviewed
             </p>
@@ -213,7 +216,7 @@ const areaCounts = {
             </p>
 
             <p
-              class="mt-2 text-sm text-slate-400"
+              class="mt-2 text-sm text-slate-300"
             >
               Under Review
             </p>
@@ -231,7 +234,7 @@ const areaCounts = {
             </p>
 
             <p
-              class="mt-2 text-sm text-slate-400"
+              class="mt-2 text-sm text-slate-300"
             >
               Total Listed
             </p>
@@ -249,7 +252,7 @@ const areaCounts = {
             </p>
 
             <p
-              class="mt-2 text-sm text-slate-400"
+              class="mt-2 text-sm text-slate-300"
             >
               Research Areas
             </p>
@@ -268,7 +271,7 @@ const areaCounts = {
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Peer-Reviewed Publications
           </p>
@@ -326,7 +329,7 @@ const areaCounts = {
 
                   <p
                     class="mt-4 text-sm leading-6
-                           text-slate-400"
+                           text-slate-300"
                   >
                     {paper.authors}
                   </p>
@@ -334,7 +337,7 @@ const areaCounts = {
 
                   <p
                     class="mt-2 text-sm font-medium
-                           text-cyan-300/90"
+                           text-cyan-200"
                   >
                     {paper.venue}
                   </p>
@@ -387,14 +390,14 @@ const areaCounts = {
       ========================================================== -->
       <section
         class="border-t border-white/10
-               bg-slate-900/60 px-6 py-20"
+               bg-black/50 px-6 py-20"
       >
 
         <div class="mx-auto max-w-6xl">
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Manuscripts Under Review
           </p>
@@ -450,7 +453,7 @@ const areaCounts = {
 
                   <p
                     class="mt-4 text-sm leading-6
-                           text-slate-400"
+                           text-slate-300"
                   >
                     {paper.authors}
                   </p>
@@ -458,7 +461,7 @@ const areaCounts = {
 
                   <p
                     class="mt-2 text-sm font-medium
-                           text-cyan-300/90"
+                           text-cyan-200"
                   >
                     {paper.venue}
                   </p>
@@ -513,7 +516,7 @@ const areaCounts = {
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Research Connections
           </p>
@@ -550,7 +553,7 @@ const areaCounts = {
               </h3>
 
               <p
-                class="mt-4 leading-7 text-slate-400"
+                class="mt-4 leading-7 text-slate-300"
               >
                 Higher-order nonlinear filtering,
                 polynomial updates, and spacecraft
@@ -590,7 +593,7 @@ const areaCounts = {
               </h3>
 
               <p
-                class="mt-4 leading-7 text-slate-400"
+                class="mt-4 leading-7 text-slate-300"
               >
                 Risk-sensitive control, covariance
                 steering, and trajectory optimization.
@@ -629,7 +632,7 @@ const areaCounts = {
               </h3>
 
               <p
-                class="mt-4 leading-7 text-slate-400"
+                class="mt-4 leading-7 text-slate-300"
               >
                 Data-driven prediction and
                 characterization of composite-material
@@ -656,7 +659,7 @@ const areaCounts = {
       ========================================================== -->
       <section
         class="border-t border-white/10
-               bg-slate-900/60 px-6 py-20"
+               bg-black/50 px-6 py-20"
       >
 
         <div
@@ -665,7 +668,7 @@ const areaCounts = {
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Research Profiles
           </p>

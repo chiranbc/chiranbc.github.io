@@ -1,5 +1,6 @@
 ---
 import TopNavbar from "../components/ui/TopNavbar.astro";
+import SpaceBackdrop from "../components/ui/SpaceBackdrop.astro";
 import SiteFooter from "../components/ui/SiteFooter.astro";
 import SEO from "../components/ui/SEO.astro";
 ---
@@ -15,12 +16,14 @@ import SEO from "../components/ui/SEO.astro";
     />
   </head>
 
-  <body class="bg-slate-950 text-white overflow-x-hidden">
-    <TopNavbar />
+  <body class="bg-[#010205] text-white overflow-x-hidden">
+    
+    <SpaceBackdrop />
+<TopNavbar />
 
-    <main id="main-content" class="px-6 py-24 sm:py-32">
+    <main id="main-content" class="relative z-10 px-6 py-24 sm:py-32">
       <section class="mx-auto max-w-4xl text-center">
-        <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">
+        <p class="text-sm uppercase tracking-[0.3em] text-cyan-200">
           Navigation Error
         </p>
         <h1 class="mt-5 text-7xl font-bold tracking-tight text-cyan-300 sm:text-8xl">

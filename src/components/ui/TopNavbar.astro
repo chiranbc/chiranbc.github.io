@@ -31,7 +31,7 @@ const isActive = (href) => {
 
 <header
   class="sticky top-0 z-50 border-b border-white/10
-         bg-slate-950/90 backdrop-blur-xl"
+         bg-black/80 backdrop-blur-xl"
 >
   <nav
     class="mx-auto flex max-w-6xl items-center
@@ -66,10 +66,10 @@ const isActive = (href) => {
                 : undefined
             }
             class:list={[
-              "relative py-1 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-4 focus-visible:ring-offset-slate-950 rounded-sm",
+              "relative py-1 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-4 focus-visible:ring-offset-black rounded-sm",
               isActive(item.href)
                 ? "font-medium text-cyan-300"
-                : "text-slate-300 hover:text-cyan-300",
+                : "text-slate-200 hover:text-cyan-200",
             ]}
           >
             {item.label}
@@ -160,7 +160,7 @@ const isActive = (href) => {
         class="absolute right-0 top-[calc(100%+0.75rem)]
                w-64 overflow-hidden rounded-2xl
                border border-white/10
-               bg-slate-950/95 p-2
+               bg-black/95 p-2
                shadow-2xl backdrop-blur-xl"
       >
 
@@ -177,7 +177,7 @@ const isActive = (href) => {
                 "block rounded-xl px-4 py-3 text-sm transition",
                 isActive(item.href)
                   ? "bg-cyan-300/10 font-medium text-cyan-300"
-                  : "text-slate-300 hover:bg-white/5 hover:text-cyan-300",
+                  : "text-slate-200 hover:bg-white/5 hover:text-cyan-200",
               ]}
             >
               {item.label}

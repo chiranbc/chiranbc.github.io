@@ -1,5 +1,6 @@
 ---
 import TopNavbar from "../components/ui/TopNavbar.astro";
+import SpaceBackdrop from "../components/ui/SpaceBackdrop.astro";
 import SiteFooter from "../components/ui/SiteFooter.astro";
 import SEO from "../components/ui/SEO.astro";
 
@@ -146,11 +147,13 @@ const quickLinks = [
     </style>
   </head>
 
-  <body class="bg-slate-950 text-white overflow-x-hidden">
+  <body class="bg-[#010205] text-white overflow-x-hidden">
 
-    <TopNavbar />
     
-    <main id="main-content">
+    <SpaceBackdrop />
+<TopNavbar />
+    
+    <main id="main-content" class="relative z-10">
 
       <!-- =========================================================
            HERO
@@ -222,7 +225,7 @@ const quickLinks = [
             </p>
 
             <p
-              class="mt-1 text-sm text-slate-400"
+              class="mt-1 text-sm text-slate-300"
             >
               Iowa State University · Ames, Iowa
             </p>
@@ -276,7 +279,7 @@ const quickLinks = [
 
             <p
               class="text-sm uppercase tracking-[0.3em]
-                     text-cyan-300/80"
+                     text-cyan-200"
             >
               About
             </p>
@@ -303,7 +306,7 @@ const quickLinks = [
 
             <p
               class="mt-5 max-w-3xl leading-8
-                     text-slate-400"
+                     text-slate-300"
             >
               My current work explores estimation methods that move
               beyond conventional linear measurement updates,
@@ -356,14 +359,14 @@ const quickLinks = [
       ========================================================== -->
       <section
         class="border-t border-white/10
-               bg-slate-900/60 px-6 py-20"
+               bg-black/50 px-6 py-20"
       >
 
         <div class="mx-auto max-w-6xl">
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Education
           </p>
@@ -407,21 +410,21 @@ const quickLinks = [
                     </h3>
 
                     <p
-                      class="mt-2 text-cyan-300/90"
+                      class="mt-2 text-cyan-200"
                     >
                       {item.institution}
                     </p>
 
                     <p
                       class="mt-1 text-sm
-                             text-slate-400"
+                             text-slate-300"
                     >
                       {item.location}
                     </p>
 
                     <p
                       class="mt-2 text-sm
-                             text-slate-400"
+                             text-slate-300"
                     >
                       {item.detail}
                     </p>
@@ -455,7 +458,7 @@ const quickLinks = [
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Research Interests
           </p>
@@ -499,7 +502,7 @@ const quickLinks = [
 
                   <p
                     class="mt-4 leading-7
-                           text-slate-400"
+                           text-slate-300"
                   >
                     {area.description}
                   </p>
@@ -526,14 +529,14 @@ const quickLinks = [
       ========================================================== -->
       <section
         class="border-t border-white/10
-               bg-slate-900/60 px-6 py-20"
+               bg-black/50 px-6 py-20"
       >
 
         <div class="mx-auto max-w-6xl">
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Technical Skills
           </p>
@@ -611,7 +614,7 @@ const quickLinks = [
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Looking Ahead
           </p>

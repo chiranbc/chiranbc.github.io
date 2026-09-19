@@ -1,5 +1,6 @@
 ---
 import TopNavbar from "../components/ui/TopNavbar.astro";
+import SpaceBackdrop from "../components/ui/SpaceBackdrop.astro";
 import SiteFooter from "../components/ui/SiteFooter.astro";
 import SEO from "../components/ui/SEO.astro";
 
@@ -146,15 +147,17 @@ const missionLog = [
     </style>
   </head>
 
-  <body class="overflow-x-hidden bg-slate-950 text-white">
+  <body class="overflow-x-hidden bg-[#010205] text-white">
 
-    <!-- =========================================================
+    
+    <SpaceBackdrop />
+<!-- =========================================================
          NAVIGATION
     ========================================================== -->
     <TopNavbar />
 
 
-    <main id="main-content">
+    <main id="main-content" class="relative z-10">
 
       <!-- =========================================================
            HERO
@@ -193,7 +196,7 @@ const missionLog = [
 
             <p
               class="text-sm uppercase tracking-[0.32em]
-                     text-cyan-300/80"
+                     text-cyan-200"
             >
               Aerospace Engineering · Estimation · Control
             </p>
@@ -213,7 +216,7 @@ const missionLog = [
             </p>
 
             <p
-              class="mt-1 text-slate-400"
+              class="mt-1 text-slate-300"
             >
               Iowa State University · Ames, Iowa
             </p>
@@ -238,7 +241,7 @@ const missionLog = [
           <div class="mx-auto mt-10 max-w-md md:hidden">
             <div
               class="rounded-3xl border border-cyan-300/20
-                     bg-slate-900/95 p-6 text-center shadow-xl"
+                     bg-black/80 p-6 text-center shadow-xl"
             >
               <div
                 class="mx-auto h-28 w-28 overflow-hidden rounded-full
@@ -256,7 +259,7 @@ const missionLog = [
                 />
               </div>
               <p class="mt-4 font-semibold text-white">Chiran Binnu Cherian</p>
-              <p class="mt-1 text-sm text-slate-400">
+              <p class="mt-1 text-sm text-slate-300">
                 Estimation · Control · Autonomy · ML
               </p>
             </div>
@@ -324,7 +327,7 @@ const missionLog = [
                      w-[190px]
                      -translate-x-1/2 -translate-y-1/2
                      rounded-3xl border border-cyan-300/20
-                     bg-slate-900/95 p-5 text-center
+                     bg-black/80 p-5 text-center
                      shadow-2xl backdrop-blur"
             >
 
@@ -354,7 +357,7 @@ const missionLog = [
 
               <p
                 class="mt-1 text-xs leading-5
-                       text-slate-400"
+                       text-slate-300"
               >
                 Estimation · Control · Autonomy · ML
               </p>
@@ -370,7 +373,7 @@ const missionLog = [
                   class="orbit-node absolute z-30
                          w-[190px] rounded-2xl
                          border border-cyan-300/25
-                         bg-slate-900/95 p-4
+                         bg-black/80 p-4
                          text-center shadow-xl
                          backdrop-blur transition
                          hover:border-cyan-300/60
@@ -432,7 +435,7 @@ const missionLog = [
       ========================================================== -->
       <section
         class="border-t border-white/10
-               bg-slate-900/60 px-6 py-20"
+               bg-black/50 px-6 py-20"
       >
 
         <div
@@ -445,7 +448,7 @@ const missionLog = [
 
             <p
               class="text-sm uppercase tracking-[0.3em]
-                     text-cyan-300/80"
+                     text-cyan-200"
             >
               About
             </p>
@@ -471,7 +474,7 @@ const missionLog = [
 
             <p
               class="mt-4 max-w-3xl
-                     leading-8 text-slate-400"
+                     leading-8 text-slate-300"
             >
               My work combines mathematical estimation and
               control theory with computational methods,
@@ -499,7 +502,7 @@ const missionLog = [
 
             <p
               class="text-sm uppercase tracking-[0.2em]
-                     text-slate-400"
+                     text-slate-300"
             >
               Current Focus
             </p>
@@ -512,7 +515,7 @@ const missionLog = [
                 </p>
                 <p
                   class="mt-1 text-sm
-                         leading-6 text-slate-400"
+                         leading-6 text-slate-300"
                 >
                   Higher-order and polynomial Kalman-filter
                   updates under nonlinear and non-Gaussian
@@ -526,7 +529,7 @@ const missionLog = [
                 </p>
                 <p
                   class="mt-1 text-sm
-                         leading-6 text-slate-400"
+                         leading-6 text-slate-300"
                 >
                   Risk-sensitive optimal control and
                   continuous-time LEQG covariance steering.
@@ -539,7 +542,7 @@ const missionLog = [
                 </p>
                 <p
                   class="mt-1 text-sm
-                         leading-6 text-slate-400"
+                         leading-6 text-slate-300"
                 >
                   Data-driven prediction and characterization
                   of material behavior.
@@ -563,7 +566,7 @@ const missionLog = [
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Research
           </p>
@@ -574,7 +577,7 @@ const missionLog = [
 
           <p
             class="mt-5 max-w-3xl
-                   leading-8 text-slate-400"
+                   leading-8 text-slate-300"
           >
             Three connected research directions define my
             current work.
@@ -613,7 +616,7 @@ const missionLog = [
 
                   <p
                     class="mt-4 leading-7
-                           text-slate-400"
+                           text-slate-300"
                   >
                     {area.description}
                   </p>
@@ -640,7 +643,7 @@ const missionLog = [
       ========================================================== -->
       <section
         class="border-t border-white/10
-               bg-slate-900/60 px-6 py-20"
+               bg-black/50 px-6 py-20"
       >
 
         <div class="mx-auto max-w-6xl">
@@ -656,7 +659,7 @@ const missionLog = [
               <p
                 class="text-sm uppercase
                        tracking-[0.3em]
-                       text-cyan-300/80"
+                       text-cyan-200"
               >
                 Publications
               </p>
@@ -724,14 +727,14 @@ const missionLog = [
 
                     <p
                       class="mt-2 text-sm
-                             text-slate-400"
+                             text-slate-300"
                     >
                       {paper.venue}
                     </p>
 
                     <p
                       class="mt-2 text-xs
-                             text-cyan-300/80"
+                             text-cyan-200"
                     >
                       {paper.area}
                     </p>
@@ -769,7 +772,7 @@ const missionLog = [
 
             <p
               class="text-sm uppercase tracking-[0.3em]
-                     text-cyan-300/80"
+                     text-cyan-200"
             >
               Experience
             </p>
@@ -819,7 +822,7 @@ const missionLog = [
 
               <p
                 class="mt-3 leading-7
-                       text-slate-400"
+                       text-slate-300"
               >
                 Spacecraft estimation, covariance steering,
                 and engineering materials.
@@ -841,7 +844,7 @@ const missionLog = [
 
               <p
                 class="mt-3 leading-7
-                       text-slate-400"
+                       text-slate-300"
               >
                 Aerospace manufacturing, marine engineering,
                 quality control, CAD, and fabrication.
@@ -863,7 +866,7 @@ const missionLog = [
 
               <p
                 class="mt-3 leading-7
-                       text-slate-400"
+                       text-slate-300"
               >
                 Graduate Linear Systems instruction,
                 computational examples, and student support.
@@ -885,7 +888,7 @@ const missionLog = [
 
               <p
                 class="mt-3 leading-7
-                       text-slate-400"
+                       text-slate-300"
               >
                 University rocketry, recovery systems,
                 testing, and engineering leadership.
@@ -903,7 +906,7 @@ const missionLog = [
       ========================================================== -->
       <section
         class="border-t border-white/10
-               bg-slate-900/60 px-6 py-20"
+               bg-black/50 px-6 py-20"
       >
 
         <div class="mx-auto max-w-6xl">
@@ -919,7 +922,7 @@ const missionLog = [
               <p
                 class="text-sm uppercase
                        tracking-[0.3em]
-                       text-cyan-300/80"
+                       text-cyan-200"
               >
                 Mission Log
               </p>
@@ -1015,7 +1018,7 @@ const missionLog = [
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Contact
           </p>

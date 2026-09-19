@@ -1,5 +1,6 @@
 ---
 import TopNavbar from "../components/ui/TopNavbar.astro";
+import SpaceBackdrop from "../components/ui/SpaceBackdrop.astro";
 import SiteFooter from "../components/ui/SiteFooter.astro";
 import SEO from "../components/ui/SEO.astro";
 
@@ -158,10 +159,12 @@ const leadership = [
     </style>
   </head>
 
-  <body class="bg-slate-950 text-white overflow-x-hidden">
-    <TopNavbar />
+  <body class="bg-[#010205] text-white overflow-x-hidden">
+    
+    <SpaceBackdrop />
+<TopNavbar />
 
-    <main id="main-content">
+    <main id="main-content" class="relative z-10">
       <!-- =========================================================
            HERO
       ========================================================== -->
@@ -183,7 +186,7 @@ const leadership = [
         </div>
 
         <div class="relative mx-auto max-w-5xl text-center">
-          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">
+          <p class="text-sm uppercase tracking-[0.3em] text-cyan-200">
             Experience
           </p>
 
@@ -214,14 +217,14 @@ const leadership = [
       <section
         id="research"
         class="scroll-mt-24 border-t border-white/10
-               bg-slate-900/60 px-6 py-20"
+               bg-black/50 px-6 py-20"
       >
 
         <div class="mx-auto max-w-6xl">
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Research Experience
           </p>
@@ -268,14 +271,14 @@ const leadership = [
 
                       <p
                         class="mt-1 text-sm
-                               text-slate-400"
+                               text-slate-300"
                       >
                         {item.institution}
                       </p>
 
                       <p
                         class="mt-1 text-sm
-                               text-slate-400"
+                               text-slate-300"
                       >
                         {item.advisor}
                       </p>
@@ -330,7 +333,7 @@ const leadership = [
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Selected Technical Projects
           </p>
@@ -365,7 +368,7 @@ const leadership = [
 
                   <p
                     class="mt-3 text-sm
-                           text-slate-400"
+                           text-slate-300"
                   >
                     Methods / Tools: {project.tools}
                   </p>
@@ -384,7 +387,7 @@ const leadership = [
                         <li
                           class="flex gap-3
                                  leading-7
-                                 text-slate-400"
+                                 text-slate-300"
                         >
                           <span
                             class="mt-[0.65rem]
@@ -417,14 +420,14 @@ const leadership = [
       <section
         id="teaching"
         class="scroll-mt-24 border-t border-white/10
-               bg-slate-900/60 px-6 py-20"
+               bg-black/50 px-6 py-20"
       >
 
         <div class="mx-auto max-w-6xl">
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Teaching Experience
           </p>
@@ -465,7 +468,7 @@ const leadership = [
 
                   <p
                     class="mt-1 text-sm
-                           text-slate-400"
+                           text-slate-300"
                   >
                     {item.institution}
                   </p>
@@ -516,7 +519,7 @@ const leadership = [
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Industry Experience
           </p>
@@ -561,7 +564,7 @@ const leadership = [
 
                   <p
                     class="mt-1 text-sm
-                           text-slate-400"
+                           text-slate-300"
                   >
                     {item.location}
                   </p>
@@ -573,7 +576,7 @@ const leadership = [
                         <li
                           class="flex gap-3
                                  leading-7
-                                 text-slate-400"
+                                 text-slate-300"
                         >
                           <span
                             class="mt-[0.65rem]
@@ -606,14 +609,14 @@ const leadership = [
       <section
         id="leadership"
         class="scroll-mt-24 border-t border-white/10
-               bg-slate-900/60 px-6 py-20"
+               bg-black/50 px-6 py-20"
       >
 
         <div class="mx-auto max-w-6xl">
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Leadership & Engineering Activities
           </p>
@@ -654,7 +657,7 @@ const leadership = [
 
                   <p
                     class="mt-1 text-sm
-                           text-slate-400"
+                           text-slate-300"
                   >
                     {item.institution}
                   </p>
@@ -708,7 +711,7 @@ const leadership = [
 
           <p
             class="text-sm uppercase tracking-[0.3em]
-                   text-cyan-300/80"
+                   text-cyan-200"
           >
             Explore Further
           </p>
